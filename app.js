@@ -144,13 +144,20 @@ function renderDashboard(container) {
       const badgeClass = isCompleted ? 'completed' : '';
       const badgeText = isCompleted ? 'Complété' : 'À faire';
 
+      const yearBadge = ch.yearLevel
+        ? `<span class="year-badge" title="Niveau d'origine de cette notion">${ch.yearLevel}</span>`
+        : '';
+
       chaptersHtml += `
         <div class="chapter-card" data-chapter-id="${ch.id}">
           <div class="chapter-card-header">
             <div class="chapter-card-icon">${ch.icon}</div>
             <div class="chapter-card-info">
               <h4>${ch.title}</h4>
-              <span class="chapter-badge ${badgeClass}">${badgeText}</span>
+              <div class="chapter-card-badges">
+                <span class="chapter-badge ${badgeClass}">${badgeText}</span>
+                ${yearBadge}
+              </div>
             </div>
           </div>
           <div class="chapter-card-progress">
@@ -226,8 +233,9 @@ function renderChapterView() {
       <span>← Retour au tableau de bord</span>
     </button>
 
-    <div class="header-bar" style="margin-bottom: 1rem;">
+    <div class="header-bar chapter-header" style="margin-bottom: 1rem;">
       <h2>${chapter.title}</h2>
+      ${chapter.yearLevel ? `<span class="year-badge" title="Niveau d'origine de cette notion">${chapter.yearLevel}</span>` : ''}
     </div>
 
     <div class="tabs-container">

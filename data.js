@@ -136,7 +136,8 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p>$A \\cap B$ (intersection) désigne les éléments qui appartiennent <strong>à la fois</strong> à $A$ <strong>et</strong> à $B$.</p>\n            <p>En comparant les deux listes : $-1$ est dans $A$ et dans $B$ ✓ ; $0$ est dans $A$ et dans $B$ ✓ ; $2$ est dans $A$ et dans $B$ ✓. Les autres éléments ($-3$, $5$ pour $A$ ; $1$, $3$ pour $B$) ne sont que dans un seul des deux ensembles.</p>\n            <p>Donc $A \\cap B = \\{-1 ; 0 ; 2\\}$.</p>\n            <p><em>Remarque :</em> la réunion $A \\cup B$ contiendrait tous les éléments des deux listes réunies (sans répéter ceux comptés deux fois) : $A \\cup B = \\{-3 ; -1 ; 0 ; 1 ; 2 ; 3 ; 5\\}$.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "2de"
       },
       {
         "id": "fractions",
@@ -270,13 +271,14 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p>Le dénominateur commun est $(x+1)(x-1) = x^2 - 1$.</p>\n            <p>Mise au même dénominateur :<br>\n            $\\frac{x(x-1)}{(x+1)(x-1)} - \\frac{1(x+1)}{(x-1)(x+1)}$</p>\n            <p>Soustraction :<br>\n            $F(x) = \\frac{x^2 - x - (x + 1)}{x^2 - 1}$</p>\n            <p>⚠️ Attention au signe moins :<br>\n            $F(x) = \\frac{x^2 - 2x - 1}{x^2 - 1}$</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "4e→3e"
       },
       {
         "id": "puissances",
         "title": "Chapitre 2 : Les Puissances",
         "icon": "⚡",
-        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Les puissances permettent d'écrire de très grands nombres ou de très petits nombres de façon concise.</p>\n        <h3>1. Définition et Règles Fondamentales</h3>\n        <ul>\n          <li>$a^n \\times a^p = a^{n+p}$</li>\n          <li>$\\frac{a^n}{a^p} = a^{n-p}$</li>\n          <li>$(a^n)^p = a^{n \\times p}$</li>\n          <li>$(a \\times b)^n = a^n \\times b^n$</li>\n          <li>$a^{-n} = \\frac{1}{a^n}$</li>\n        </ul>\n      ",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Les puissances permettent d'écrire de façon courte une multiplication d'un même nombre par lui-même, et de manipuler aussi bien de très grands que de très petits nombres. En Première, elles reviennent partout : en calcul, en notation scientifique et dans l'étude des fonctions.</p>\n\n        <div class=\"card-tip\">\n          <strong>Définition :</strong> pour un nombre $a$ et un entier $n \\ge 1$, $a^n = \\underbrace{a \\times a \\times \\dots \\times a}_{n \\text{ facteurs}}$. Par convention, $a^0 = 1$ (pour $a \\neq 0$) et $a^1 = a$.\n        </div>\n\n        <h3>1. Les cinq règles fondamentales</h3>\n        <p>Tout le calcul sur les puissances repose sur ces cinq règles. Il faut les connaître par cœur.</p>\n        <div class=\"formula\">\n          <p>$$a^n \\times a^p = a^{n+p} \\qquad \\frac{a^n}{a^p} = a^{n-p} \\qquad (a^n)^p = a^{n \\times p}$$</p>\n          <p>$$(a \\times b)^n = a^n \\times b^n \\qquad a^{-n} = \\frac{1}{a^n}$$</p>\n        </div>\n        <p><strong>Exemple concret :</strong> $2^3 \\times 2^5 = 2^{3+5} = 2^8$. On <em>ajoute</em> les exposants quand on <em>multiplie</em> deux puissances d'un même nombre — on ne multiplie surtout pas les exposants !</p>\n\n        <div class=\"card-warning\">\n          <strong>Piège classique :</strong> $a^n \\times a^p$ n'est <strong>pas</strong> $a^{n \\times p}$. On additionne les exposants ($a^{n+p}$). La multiplication des exposants n'apparaît que pour une puissance de puissance : $(a^n)^p = a^{n\\times p}$.\n        </div>\n\n        <h3>2. Le signe d'une puissance</h3>\n        <ul>\n          <li>Une puissance d'un nombre <strong>positif</strong> est toujours positive.</li>\n          <li>Pour un nombre négatif : $(-a)^n$ est <strong>positif si $n$ est pair</strong>, <strong>négatif si $n$ est impair</strong>. Exemple : $(-2)^4 = 16$ mais $(-2)^3 = -8$.</li>\n        </ul>\n        <div class=\"card-warning\">\n          <strong>Attention aux parenthèses :</strong> $(-2)^4 = 16$ (on élève $-2$ à la puissance 4), mais $-2^4 = -(2^4) = -16$ (on élève seulement $2$, puis on prend l'opposé). Les parenthèses changent tout !\n        </div>\n\n        <h3>3. La notation scientifique</h3>\n        <p>Tout nombre peut s'écrire sous la forme $a \\times 10^n$ où $1 \\le a < 10$ (un seul chiffre non nul avant la virgule) et $n$ est un entier relatif.</p>\n        <div class=\"formula\">\n          <p>$$48\\,500 = 4{,}85 \\times 10^4 \\qquad 0{,}00037 = 3{,}7 \\times 10^{-4}$$</p>\n        </div>\n        <p><strong>Astuce :</strong> l'exposant de $10$ compte de combien de rangs on a déplacé la virgule. Vers la gauche → exposant positif ; vers la droite → exposant négatif.</p>\n      ",
         "exercises": [
           {
             "id": "puis_n1",
@@ -382,8 +384,30 @@ const COURSE_DATA = [
               }
             ],
             "correction": "\n            <h4>Correction de l'exercice 5 (Niveau 3)</h4>\n            <p>Étape 1 : $(y^{-2})^2 = y^{-4}$.</p>\n            <p>Étape 2 : Quotient des $x$ : $\\frac{x^3}{x^{-1}} = x^{3 - (-1)} = x^4$.</p>\n            <p>Étape 3 : Quotient des $y$ : $\\frac{y^{-4}}{y^3} = y^{-4 - 3} = y^{-7}$.</p>\n            <p>Résultat : $E = x^4 y^{-7}$.</p>\n          "
+          },
+          {
+            "id": "puis_n6",
+            "level": 3,
+            "title": "Niveau 3 : Expression littérale avec exposants négatifs",
+            "question": "<p>Écrire sous la forme $a^n$ avec $n$ entier : $$F = \\frac{(a^2)^3 \\times a^{-4}}{a^{-3}}$$ (pour $a \\neq 0$).</p>",
+            "options": [
+              {
+                "text": "$F = a^{5}$",
+                "isCorrect": true
+              },
+              {
+                "text": "$F = a^{2}$",
+                "isCorrect": false
+              },
+              {
+                "text": "$F = a^{-1}$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 3)</h4>\n            <p>On applique les règles dans l'ordre. Au numérateur : $(a^2)^3 = a^{6}$ (puissance de puissance : on multiplie les exposants), puis $a^6 \\times a^{-4} = a^{6-4} = a^{2}$.</p>\n            <p>Il reste $\\dfrac{a^2}{a^{-3}} = a^{2-(-3)} = a^{2+3} = a^{5}$.</p>\n            <p>Donc $F = a^{5}$.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "4e→3e"
       },
       {
         "id": "racines_valeur_absolue",
@@ -517,13 +541,14 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p>On simplifie chaque racine séparément en cherchant le plus grand carré parfait diviseur :</p>\n            <p>$\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}$</p>\n            <p>$\\sqrt{8} = \\sqrt{4 \\times 2} = 2\\sqrt{2}$</p>\n            <p>$\\sqrt{18} = \\sqrt{9 \\times 2} = 3\\sqrt{2}$</p>\n            <p>Toutes les racines obtenues sont identiques ($\\sqrt{2}$), on peut donc combiner les coefficients :</p>\n            <p>$$5\\sqrt{2} - 2\\sqrt{2} + 3\\sqrt{2} = (5-2+3)\\sqrt{2} = 6\\sqrt{2}$$</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "3e→2de"
       },
       {
         "id": "calcul_litteral",
         "title": "Chapitre 3 : Calcul Littéral",
         "icon": "🧬",
-        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Le calcul littéral est indispensable pour manipuler des équations et des fonctions.</p>\n        <h3>Les Trois Identités Remarquables</h3>\n        <div class=\"formula\">\n          <p>$$(a+b)^2 = a^2 + 2ab + b^2$$</p>\n          <p>$$(a-b)^2 = a^2 - 2ab + b^2$$</p>\n          <p>$$(a+b)(a-b) = a^2 - b^2$$</p>\n        </div>\n      ",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Le calcul littéral, c'est calculer avec des lettres. Il est indispensable pour résoudre des équations, manipuler des fonctions et démontrer en Première. Deux gestes inverses reviennent sans cesse : <strong>développer</strong> (enlever les parenthèses) et <strong>factoriser</strong> (faire apparaître un produit).</p>\n\n        <h3>1. Développer avec la distributivité</h3>\n        <p>Développer, c'est transformer un produit en somme en distribuant la multiplication.</p>\n        <div class=\"formula\">\n          <p>$$k(a+b) = ka + kb \\qquad (a+b)(c+d) = ac + ad + bc + bd$$</p>\n        </div>\n        <p><strong>Exemple :</strong> $3x(2x-5) = 3x\\times 2x - 3x \\times 5 = 6x^2 - 15x$.</p>\n\n        <h3>2. Les trois identités remarquables</h3>\n        <p>Ce sont des développements à connaître par cœur : ils font gagner un temps précieux dans les deux sens.</p>\n        <div class=\"formula\">\n          <p>$$(a+b)^2 = a^2 + 2ab + b^2$$</p>\n          <p>$$(a-b)^2 = a^2 - 2ab + b^2$$</p>\n          <p>$$(a+b)(a-b) = a^2 - b^2$$</p>\n        </div>\n        <p><strong>Exemple :</strong> $(3x-2)^2 = (3x)^2 - 2\\times 3x \\times 2 + 2^2 = 9x^2 - 12x + 4$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Erreur très fréquente :</strong> $(a+b)^2 \\neq a^2 + b^2$ ! Il ne faut jamais oublier le double produit $2ab$ au milieu.\n        </div>\n\n        <h3>3. Factoriser</h3>\n        <p>Factoriser, c'est l'opération inverse de développer : on transforme une somme en produit. C'est indispensable pour résoudre les équations.</p>\n        <p><strong>Méthode 1 — facteur commun :</strong> on repère un facteur présent dans chaque terme et on le met en facteur.</p>\n        <div class=\"formula\">\n          <p>$$ka + kb = k(a+b)$$</p>\n        </div>\n        <p>Exemple : $(2x-3)(x+5) - (2x-3)^2$ : le facteur commun est $(2x-3)$, donc l'expression vaut $(2x-3)\\big[(x+5)-(2x-3)\\big] = (2x-3)(-x+8)$.</p>\n        <p><strong>Méthode 2 — identité remarquable $a^2-b^2$ :</strong> une différence de deux carrés se factorise toujours.</p>\n        <div class=\"formula\">\n          <p>$$a^2 - b^2 = (a+b)(a-b)$$</p>\n        </div>\n        <p>Exemple : $(x+2)^2 - 16 = (x+2)^2 - 4^2 = \\big[(x+2)+4\\big]\\big[(x+2)-4\\big] = (x+6)(x-2)$.</p>\n\n        <div class=\"card-tip\">\n          <strong>Réflexe :</strong> pour factoriser, cherche d'abord un facteur commun ; si tu n'en vois pas, regarde si tu as une différence de deux carrés ($\\dots - \\dots$ où chaque morceau est un carré).\n        </div>\n      ",
         "exercises": [
           {
             "id": "lit_n1",
@@ -629,14 +654,36 @@ const COURSE_DATA = [
               }
             ],
             "correction": "\n            <h4>Correction de l'exercice 5 (Niveau 3)</h4>\n            <p>$9x^2 - 12x + 4 = (3x - 2)^2$</p>\n            <p>$E(x) = (3x - 2)^2 - (3x - 2)(x + 4)$</p>\n            <p>$E(x) = (3x - 2) [ (3x - 2) - (x + 4) ] = (3x - 2)(2x - 6)$</p>\n          "
+          },
+          {
+            "id": "lit_n6",
+            "level": 3,
+            "title": "Niveau 3 : Factoriser après reconnaissance d'un carré",
+            "question": "<p>Factoriser : $$F(x) = (x+1)^2 - (2x-3)^2$$</p>",
+            "options": [
+              {
+                "text": "$F(x) = (3x-2)(-x+4)$",
+                "isCorrect": true
+              },
+              {
+                "text": "$F(x) = (x+1-2x-3)(x+1+2x-3)$",
+                "isCorrect": false
+              },
+              {
+                "text": "On ne peut pas factoriser",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 3)</h4>\n            <p>On reconnaît une différence de deux carrés $A^2 - B^2 = (A+B)(A-B)$, avec $A = x+1$ et $B = 2x-3$.</p>\n            <p>$A + B = (x+1)+(2x-3) = 3x - 2$.</p>\n            <p>$A - B = (x+1)-(2x-3) = x + 1 - 2x + 3 = -x + 4$. (Attention au signe : on soustrait <em>tout</em> $B$.)</p>\n            <p>Donc $F(x) = (3x-2)(-x+4)$.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "3e→2de"
       },
       {
         "id": "equations_inequations",
         "title": "Chapitre 4 : Équations & Inéquations",
         "icon": "⚖️",
-        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>L'outil principal pour les équations de degré supérieur à 1 est la règle de l'équation produit nul.</p>\n        <div class=\"card-warning\">\n          <strong>Règle d'or des inéquations :</strong> Si on multiplie ou si on divise par un nombre négatif, on <strong>change le sens de l'inégalité</strong>.\n        </div>\n      ",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Résoudre une équation, c'est trouver toutes les valeurs de l'inconnue qui rendent l'égalité vraie. Résoudre une inéquation, c'est trouver toutes les valeurs qui rendent l'inégalité vraie : la réponse est alors un <strong>intervalle</strong> de solutions.</p>\n\n        <h3>1. Équation du premier degré</h3>\n        <p>On isole l'inconnue $x$ en regroupant les termes en $x$ d'un côté et les nombres de l'autre.</p>\n        <p><strong>Exemple :</strong> $5x - 7 = 2x + 5 \\Rightarrow 5x - 2x = 5 + 7 \\Rightarrow 3x = 12 \\Rightarrow x = 4$.</p>\n\n        <h3>2. L'équation produit nul</h3>\n        <p>C'est l'outil clé dès que le degré dépasse 1. Il repose sur une règle simple :</p>\n        <div class=\"card-tip\">\n          <strong>Règle du produit nul :</strong> un produit de facteurs est nul si et seulement si <strong>au moins un</strong> de ses facteurs est nul. $A \\times B = 0 \\iff A = 0 \\text{ ou } B = 0$.\n        </div>\n        <p><strong>Exemple :</strong> $(2x-5)(3x+9) = 0$ donne $2x-5 = 0$ ou $3x+9 = 0$, c'est-à-dire $x = \\dfrac{5}{2}$ ou $x = -3$.</p>\n\n        <h3>3. Équations du type $x^2 = k$</h3>\n        <ul>\n          <li>Si $k > 0$ : deux solutions, $x = \\sqrt{k}$ ou $x = -\\sqrt{k}$.</li>\n          <li>Si $k = 0$ : une seule solution, $x = 0$.</li>\n          <li>Si $k < 0$ : aucune solution (un carré n'est jamais négatif).</li>\n        </ul>\n        <p><strong>Exemple :</strong> $x^2 = 16 \\Rightarrow x = 4$ ou $x = -4$. Ne pas oublier la solution négative !</p>\n\n        <h3>4. Les inéquations</h3>\n        <p>On résout une inéquation presque comme une équation, avec UNE règle supplémentaire fondamentale :</p>\n        <div class=\"card-warning\">\n          <strong>Règle d'or des inéquations :</strong> si on multiplie ou si on divise les deux membres par un nombre <strong>négatif</strong>, on <strong>change le sens</strong> de l'inégalité ($\\le$ devient $\\ge$, et inversement).\n        </div>\n        <p><strong>Exemple :</strong> $-2x + 5 \\ge 7x - 4 \\Rightarrow -2x - 7x \\ge -4 - 5 \\Rightarrow -9x \\ge -9$. On divise par $-9$ (négatif), donc on inverse : $x \\le 1$. Solutions : $]-\\infty\\,;\\,1]$.</p>\n\n        <div class=\"card-tip\">\n          <strong>Astuce de présentation :</strong> les solutions d'une inéquation se donnent toujours sous forme d'intervalle, et on peut les visualiser sur une droite graduée.\n        </div>\n      ",
         "exercises": [
           {
             "id": "eq_n1",
@@ -742,8 +789,30 @@ const COURSE_DATA = [
               }
             ],
             "correction": "\n            <h4>Correction de l'exercice 5 (Niveau 3)</h4>\n            <p>On regroupe à gauche : $\\frac{2x - 1}{x + 3} - 1 \\le 0$</p>\n            <p>Mise au même dénominateur : $\\frac{x - 4}{x + 3} \\le 0$</p>\n            <p>Tableau de signes avec une valeur interdite en $-3$ et annulation en $4$.</p>\n            <p>L'expression est négative entre $-3$ (exclu) et $4$ (inclus).</p>\n          "
+          },
+          {
+            "id": "eq_n6",
+            "level": 3,
+            "title": "Niveau 3 : Résoudre par factorisation",
+            "question": "<p>Résoudre dans $\\mathbb{R}$ : $$x^2 - 5x = 0$$</p>",
+            "options": [
+              {
+                "text": "$x = 0$ ou $x = 5$",
+                "isCorrect": true
+              },
+              {
+                "text": "$x = 5$ seulement",
+                "isCorrect": false
+              },
+              {
+                "text": "$x = -5$ ou $x = 5$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 3)</h4>\n            <p>On ne divise <strong>jamais</strong> par $x$ (on perdrait la solution $x=0$). On factorise par le facteur commun $x$ :</p>\n            <p>$x^2 - 5x = x(x - 5) = 0$.</p>\n            <p>D'après la règle du produit nul : $x = 0$ ou $x - 5 = 0$, c'est-à-dire $x = 0$ ou $x = 5$.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "3e→2de"
       },
       {
         "id": "systemes_equations",
@@ -877,7 +946,8 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p>On choisit d'éliminer $y$. Dans la deuxième équation, le coefficient de $y$ est $-1$. On multiplie cette équation par $3$ pour obtenir $-3$, l'opposé de $+3$ (coefficient de $y$ dans la première équation) :</p>\n            <p>$2x-y=6 \\quad \\xrightarrow{\\times 3} \\quad 6x-3y=18$</p>\n            <p>On additionne avec la première équation $4x+3y=2$ :</p>\n            <p>$(4x+3y)+(6x-3y) = 2+18 \\Rightarrow 10x=20 \\Rightarrow x=2$</p>\n            <p>On remplace dans la deuxième équation d'origine : $2\\times2-y=6 \\Rightarrow 4-y=6 \\Rightarrow y=-2$.</p>\n            <p><em>Vérification :</em> $4\\times2+3\\times(-2)=8-6=2$ ✓.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "3e→2de"
       }
     ]
   },
@@ -890,7 +960,7 @@ const COURSE_DATA = [
         "id": "fonctions_generalites",
         "title": "Chapitre 1 : Généralités sur les fonctions",
         "icon": "📈",
-        "courseHtml": "\n        <h3>Introduction aux fonctions</h3>\n        <p>Une fonction $f$ est comme une machine qui transforme un nombre. Elle associe à un nombre $x$ (l'antécédent) un unique nombre $f(x)$ (l'image).</p>\n        <div class=\"card-tip\">\n          <strong>Graphiquement :</strong> Les antécédents ($x$) se lisent sur l'axe des abscisses (horizontal) et les images ($y$) sur l'axe des ordonnées (vertical). Le point $M(x; y)$ appartient à la courbe $\\mathcal{C}_f$ si et seulement si $y = f(x)$.\n        </div>\n      ",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Une fonction $f$ est comme une <strong>machine</strong> qui transforme un nombre : à chaque nombre $x$ que l'on entre (l'<strong>antécédent</strong>), elle associe un <strong>unique</strong> nombre $f(x)$ qui en sort (l'<strong>image</strong>). C'est l'objet central de toute la Première.</p>\n\n        <h3>1. Vocabulaire : image et antécédent</h3>\n        <ul>\n          <li>L'<strong>image</strong> de $x$ est le nombre $f(x)$ : on la calcule en remplaçant $x$ par sa valeur dans la formule.</li>\n          <li>Un <strong>antécédent</strong> de $y$ est un nombre $x$ tel que $f(x) = y$ : on le trouve en résolvant une équation.</li>\n        </ul>\n        <p><strong>Exemple :</strong> pour $f(x) = 2x^2 - 3x + 1$, l'image de $-2$ est $f(-2) = 2\\times(-2)^2 - 3\\times(-2) + 1 = 8 + 6 + 1 = 15$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Ne pas confondre :</strong> calculer une <em>image</em>, c'est un simple calcul (on remplace $x$). Chercher un <em>antécédent</em>, c'est résoudre une <em>équation</em> ($f(x) = y$) — c'est plus difficile, et il peut y avoir zéro, une ou plusieurs solutions.\n        </div>\n\n        <h3>2. Lecture graphique</h3>\n        <div class=\"card-tip\">\n          <strong>Graphiquement :</strong> les antécédents ($x$) se lisent sur l'axe horizontal (abscisses) et les images ($y$) sur l'axe vertical (ordonnées). Le point $M(x\\,;\\,y)$ appartient à la courbe $\\mathcal{C}_f$ si et seulement si $y = f(x)$.\n        </div>\n        <ul>\n          <li><strong>Lire une image :</strong> on part de $x$ sur l'axe horizontal, on monte jusqu'à la courbe, on lit $y$.</li>\n          <li><strong>Lire un antécédent :</strong> on part de $y$ sur l'axe vertical, on rejoint la courbe horizontalement, on lit le ou les $x$ correspondants.</li>\n        </ul>\n\n        <h3>3. Tester l'appartenance d'un point</h3>\n        <p>Un point $A(x_A\\,;\\,y_A)$ appartient à la courbe de $f$ si et seulement si $f(x_A) = y_A$. Il suffit de calculer l'image de $x_A$ et de comparer à $y_A$.</p>\n        <p><strong>Exemple :</strong> $A(3\\,;\\,10)$ et $g(x) = 4x - 2$. On calcule $g(3) = 4\\times 3 - 2 = 10$. Comme $g(3) = 10 = y_A$, le point $A$ appartient bien à la courbe.</p>\n      ",
         "exercises": [
           {
             "id": "fct_n1",
@@ -956,6 +1026,27 @@ const COURSE_DATA = [
             "correction": "\n            <h4>Correction de l'exercice 3 (Niveau 2)</h4>\n            <p>Chercher le ou les antécédents de $4$, c'est résoudre l'équation $h(x) = 4$.<br>\n            $3x - 5 = 4$<br>\n            $3x = 9$<br>\n            $x = 3$.</p>\n          "
           },
           {
+            "id": "fct_n5",
+            "level": 2,
+            "title": "Niveau 2 : Lecture graphique d'une image",
+            "question": "<p>Sur la courbe de $f$, on lit que le point de la courbe d'abscisse $2$ a pour ordonnée $-1$. Que vaut $f(2)$ ?</p>",
+            "options": [
+              {
+                "text": "$f(2) = -1$",
+                "isCorrect": true
+              },
+              {
+                "text": "$f(2) = 2$",
+                "isCorrect": false
+              },
+              {
+                "text": "$f(-1) = 2$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 2)</h4>\n            <p>Le point de la courbe d'abscisse $2$ et d'ordonnée $-1$ s'écrit $M(2\\,;\\,-1)$.</p>\n            <p>Par définition, ce point appartient à la courbe signifie $y = f(x)$, donc $f(2) = -1$.</p>\n            <p>⚠️ L'image se lit sur l'axe vertical : c'est l'ordonnée, ici $-1$.</p>\n          "
+          },
+          {
             "id": "fct_n4",
             "level": 3,
             "title": "Niveau 3 : Antécédents multiples",
@@ -976,7 +1067,8 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 4 (Niveau 3)</h4>\n            <p>On résout $x^2 = 9$.<br>\n            Cette équation a deux solutions : $\\sqrt{9} = 3$ et $-\\sqrt{9} = -3$. Il y a donc deux antécédents.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "3e→2de"
       },
       {
         "id": "fonctions_reference",
@@ -1110,13 +1202,14 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p>On détermine d'abord $k$ grâce à la condition $f(2)=5$ :</p>\n            <p>$$\\frac{k}{2} = 5 \\Rightarrow k = 10$$</p>\n            <p>La fonction est donc $f(x) = \\frac{10}{x}$. On calcule alors $f(10)$ :</p>\n            <p>$$f(10) = \\frac{10}{10} = 1$$</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "2de"
       },
       {
         "id": "fonctions_affines",
         "title": "Chapitre 2 : Fonctions Affines",
         "icon": "📏",
-        "courseHtml": "\n        <h3>Fonctions Affines et Linéaires</h3>\n        <p>Une fonction affine est définie sur $\\mathbb{R}$ par $f(x) = ax + b$. Sa représentation graphique est une droite.</p>\n        <ul>\n          <li><strong>$a$</strong> est le <strong>coefficient directeur</strong> (ou pente de la droite). Il indique la direction de la droite.</li>\n          <li><strong>$b$</strong> est l'<strong>ordonnée à l'origine</strong>. C'est l'ordonnée du point d'intersection avec l'axe des ordonnées.</li>\n        </ul>\n        <p>Cas particuliers :</p>\n        <ul>\n          <li>Si $b=0$, $f(x) = ax$. La fonction est linéaire (situation de proportionnalité), la droite passe par l'origine.</li>\n          <li>Si $a=0$, $f(x) = b$. La fonction est constante, la droite est horizontale.</li>\n        </ul>\n      ",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Les fonctions affines sont les fonctions les plus simples après les constantes, et leur courbe est toujours une <strong>droite</strong>. Les maîtriser est indispensable : elles servent de modèle dans énormément de situations (proportionnalité, coûts, vitesse...).</p>\n\n        <h3>1. Définition</h3>\n        <p>Une fonction affine est définie sur $\\mathbb{R}$ par $f(x) = ax + b$, où $a$ et $b$ sont deux nombres fixés.</p>\n        <ul>\n          <li><strong>$a$</strong> est le <strong>coefficient directeur</strong> (la pente de la droite) : il indique son inclinaison.</li>\n          <li><strong>$b$</strong> est l'<strong>ordonnée à l'origine</strong> : c'est l'ordonnée du point où la droite coupe l'axe vertical (en $x = 0$, $f(0) = b$).</li>\n        </ul>\n        <p>Cas particuliers : si $b = 0$, $f(x) = ax$ est <strong>linéaire</strong> (proportionnalité, droite passant par l'origine) ; si $a = 0$, $f(x) = b$ est <strong>constante</strong> (droite horizontale).</p>\n\n        <h3>2. Sens de variation</h3>\n        <div class=\"card-tip\">\n          Le sens de variation d'une fonction affine ne dépend <strong>que du signe de $a$</strong> :\n          <ul>\n            <li>si $a > 0$ : $f$ est <strong>croissante</strong> (la droite monte) ;</li>\n            <li>si $a < 0$ : $f$ est <strong>décroissante</strong> (la droite descend) ;</li>\n            <li>si $a = 0$ : $f$ est constante.</li>\n          </ul>\n        </div>\n\n        <h3>3. Le coefficient directeur à partir de deux points</h3>\n        <p>Si la droite passe par $A(x_A\\,;\\,y_A)$ et $B(x_B\\,;\\,y_B)$, alors :</p>\n        <div class=\"formula\">\n          <p>$$a = \\frac{y_B - y_A}{x_B - x_A}$$</p>\n        </div>\n        <p>C'est le <strong>taux d'accroissement</strong> : la variation des $y$ divisée par la variation des $x$.</p>\n        <p><strong>Exemple :</strong> pour $A(1\\,;\\,3)$ et $B(3\\,;\\,7)$ : $a = \\dfrac{7-3}{3-1} = \\dfrac{4}{2} = 2$. Puis on trouve $b$ avec $f(1) = 3$ : $2\\times 1 + b = 3$, donc $b = 1$. D'où $f(x) = 2x + 1$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Attention à l'ordre :</strong> dans la formule du coefficient directeur, il faut mettre les coordonnées de $A$ et $B$ dans le <strong>même ordre</strong> en haut et en bas. Si on inverse en haut, il faut inverser en bas aussi.\n        </div>\n      ",
         "exercises": [
           {
             "id": "aff_n1",
@@ -1182,6 +1275,27 @@ const COURSE_DATA = [
             "correction": "\n            <h4>Correction de l'exercice 3 (Niveau 2)</h4>\n            <p>On calcule le coefficient directeur $a = \\frac{y_B - y_A}{x_B - x_A} = \\frac{7 - 3}{3 - 1} = \\frac{4}{2} = 2$.</p>\n            <p>La fonction s'écrit donc $f(x) = 2x + b$.<br>\n            Pour trouver $b$, on utilise un point, par exemple $A(1; 3)$. On sait que $f(1) = 3$.<br>\n            $2(1) + b = 3 \\implies b = 1$.</p>\n            <p>Donc $f(x) = 2x + 1$.</p>\n          "
           },
           {
+            "id": "aff_n5",
+            "level": 2,
+            "title": "Niveau 2 : Résoudre f(x) = 0",
+            "question": "<p>Soit $f(x) = -3x + 7$. En quelle valeur de $x$ la droite coupe-t-elle l'axe des abscisses ?</p>",
+            "options": [
+              {
+                "text": "$x = \\dfrac{7}{3}$",
+                "isCorrect": true
+              },
+              {
+                "text": "$x = 7$",
+                "isCorrect": false
+              },
+              {
+                "text": "$x = -\\dfrac{7}{3}$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 2)</h4>\n            <p>La droite coupe l'axe des abscisses là où $y = 0$, donc on résout $f(x) = 0$ :</p>\n            <p>$-3x + 7 = 0 \\Rightarrow -3x = -7 \\Rightarrow x = \\dfrac{-7}{-3} = \\dfrac{7}{3}$.</p>\n            <p>La droite coupe l'axe des abscisses au point d'abscisse $\\dfrac{7}{3}$.</p>\n          "
+          },
+          {
             "id": "aff_n4",
             "level": 3,
             "title": "Niveau 3 : Taux d'accroissement",
@@ -1202,13 +1316,14 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 4 (Niveau 3)</h4>\n            <p>Le taux d'accroissement est constant pour une fonction affine :<br>\n            $a = \\frac{g(x_2) - g(x_1)}{x_2 - x_1} = \\frac{12 - (-2)}{5 - (-2)} = \\frac{14}{7} = 2$.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "3e→2de"
       },
       {
         "id": "fonctions_variations",
         "title": "Chapitre 3 : Variations et Extremums",
         "icon": "🎢",
-        "courseHtml": "\n        <h3>Tableau de Variations</h3>\n        <p>L'étude des variations d'une fonction consiste à trouver les intervalles sur lesquels la fonction est croissante ou décroissante. On résume cela dans un tableau de variations.</p>\n        <p>Un extremum local (maximum ou minimum) est atteint là où la fonction change de variation.</p>\n        <div class=\"card-warning\">\n          Ne confondez pas le <strong>tableau de signes</strong> (quand la courbe passe au-dessus ou en dessous de l'axe des abscisses) et le <strong>tableau de variations</strong> (quand la courbe monte ou descend) !\n        </div>\n      ",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Étudier les variations d'une fonction, c'est dire sur quels intervalles elle <strong>monte</strong> (croissante) ou <strong>descend</strong> (décroissante) quand on parcourt l'axe des $x$ de gauche à droite. C'est l'une des compétences les plus utilisées en Première.</p>\n\n        <h3>1. Croissance et décroissance</h3>\n        <ul>\n          <li>$f$ est <strong>croissante</strong> sur un intervalle si, quand $x$ augmente, $f(x)$ augmente aussi (la courbe monte).</li>\n          <li>$f$ est <strong>décroissante</strong> sur un intervalle si, quand $x$ augmente, $f(x)$ diminue (la courbe descend).</li>\n        </ul>\n\n        <h3>2. Le tableau de variations</h3>\n        <p>On résume les variations dans un tableau : la première ligne donne les valeurs de $x$ (bornes et points où le sens change), la seconde indique le sens par des flèches montantes ↗ ou descendantes ↘, avec les valeurs aux extrémités.</p>\n\n        <h3>3. Les extremums</h3>\n        <div class=\"card-tip\">\n          Un <strong>extremum</strong> (maximum ou minimum) est atteint là où la fonction <strong>change de sens de variation</strong>. Un <strong>maximum</strong> correspond à un sommet (la courbe passe de ↗ à ↘) ; un <strong>minimum</strong> à un creux (de ↘ à ↗).\n        </div>\n        <p><strong>Exemple :</strong> si $f$ croît sur $[-5\\,;\\,2]$ puis décroît sur $[2\\,;\\,8]$, alors $f$ atteint son <strong>maximum en $x = 2$</strong>.</p>\n\n        <h3>4. Cas d'une fonction affine sur un intervalle</h3>\n        <p>Une fonction affine étant monotone, ses extremums sur un intervalle $[m\\,;\\,M]$ sont atteints aux <strong>bornes</strong>. Si $a < 0$ (décroissante), le maximum est en $x = m$ et le minimum en $x = M$.</p>\n        <p><strong>Exemple :</strong> $f(x) = -2x + 5$ sur $[-3\\,;\\,4]$ est décroissante, donc son maximum est $f(-3) = 6 + 5 = 11$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Ne pas confondre :</strong> le <strong>tableau de signes</strong> indique où la courbe est au-dessus ($+$) ou en-dessous ($-$) de l'axe des abscisses ; le <strong>tableau de variations</strong> indique où la courbe monte ou descend. Ce sont deux études différentes !\n        </div>\n\n        <h3>5. Tableau de signes d'un produit</h3>\n        <p>Pour une fonction donnée sous forme factorisée comme $f(x) = (x-2)(x+3)$, on étudie le signe de chaque facteur, puis on applique la règle des signes du produit. Le produit s'annule en $x = 2$ et $x = -3$, et change de signe à chacune de ces valeurs.</p>\n      ",
         "exercises": [
           {
             "id": "var_n1",
@@ -1311,7 +1426,8 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 5 (Niveau 3)</h4>\n            <p>$f(x) = (x-2)(x+3)$ est un produit de deux facteurs. $f(x)=0$ quand $x-2=0$ (soit $x=2$) ou $x+3=0$ (soit $x=-3$) : ce sont les deux valeurs qui annulent $f$.</p>\n            <p>Entre ces deux valeurs (sur $]-3;2[$), testons une valeur, par exemple $x=0$ :<br>\n            $f(0) = (0-2)(0+3) = (-2)\\times(3) = -6$, qui est <strong>négatif</strong>.</p>\n            <p>Comme $f$ ne s'annule qu'en $-3$ et $2$, son signe ne change pas entre ces deux valeurs : $f(x)$ est donc négatif sur tout l'intervalle $]-3;2[$.</p>\n            <p><em>Règle générale :</em> un produit $(x-a)(x-b)$ est négatif <strong>entre</strong> ses racines $a$ et $b$, et positif <strong>à l'extérieur</strong>.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "2de"
       }
     ]
   },
@@ -1324,7 +1440,7 @@ const COURSE_DATA = [
         "id": "reperage",
         "title": "Chapitre 1 : Repérage, milieu et distance",
         "icon": "🎯",
-        "courseHtml": "\n        <h3>Milieu et Distance</h3>\n        <p>Dans un repère $(O; I, J)$, on considère deux points $A(x_A ; y_A)$ et $B(x_B ; y_B)$.</p>\n        <p><strong>Coordonnées du milieu $M$ du segment $[AB]$ :</strong></p>\n        <div class=\"formula\">\n          <p>$$M \\left( \\frac{x_A + x_B}{2} ; \\frac{y_A + y_B}{2} \\right)$$</p>\n        </div>\n        <p><strong>Distance $AB$ (dans un repère orthonormé) :</strong></p>\n        <div class=\"formula\">\n          <p>$$AB = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$$</p>\n        </div>\n      ",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Dans un repère, chaque point est repéré par un couple de coordonnées $(x\\,;\\,y)$. Savoir calculer le milieu d'un segment et la distance entre deux points est la base de toute la géométrie analytique de Première.</p>\n\n        <h3>1. Coordonnées du milieu</h3>\n        <p>Pour deux points $A(x_A\\,;\\,y_A)$ et $B(x_B\\,;\\,y_B)$, le milieu $M$ du segment $[AB]$ a pour coordonnées la <strong>moyenne</strong> des coordonnées de $A$ et $B$ :</p>\n        <div class=\"formula\">\n          <p>$$M\\left( \\frac{x_A + x_B}{2}\\,;\\,\\frac{y_A + y_B}{2} \\right)$$</p>\n        </div>\n        <p><strong>Exemple :</strong> pour $A(-2\\,;\\,4)$ et $B(6\\,;\\,0)$ : $M\\left(\\dfrac{-2+6}{2}\\,;\\,\\dfrac{4+0}{2}\\right) = M(2\\,;\\,2)$.</p>\n\n        <h3>2. Distance entre deux points</h3>\n        <p>Dans un repère <strong>orthonormé</strong> (axes perpendiculaires et même unité), la distance $AB$ découle du théorème de Pythagore :</p>\n        <div class=\"formula\">\n          <p>$$AB = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$$</p>\n        </div>\n        <p><strong>Exemple :</strong> pour $C(1\\,;\\,3)$ et $D(4\\,;\\,7)$ : $CD = \\sqrt{(4-1)^2 + (7-3)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Attention :</strong> les différences sont <strong>élevées au carré</strong>, donc le signe n'a aucune importance : $(x_B - x_A)^2 = (x_A - x_B)^2$. Une distance est toujours positive.\n        </div>\n\n        <h3>3. Applications utiles</h3>\n        <div class=\"card-tip\">\n          Avec ces deux formules on peut : montrer qu'un point est le milieu d'un segment, prouver qu'un triangle est <strong>isocèle</strong> (deux distances égales) ou <strong>équilatéral</strong> (trois distances égales), ou encore tester si un quadrilatère est un parallélogramme (mêmes milieux des diagonales).\n        </div>\n      ",
         "exercises": [
           {
             "id": "rep_n1",
@@ -1369,6 +1485,27 @@ const COURSE_DATA = [
             "correction": "\n            <h4>Correction de l'exercice 2 (Niveau 2)</h4>\n            <p>$CD = \\sqrt{(4 - 1)^2 + (7 - 3)^2}$</p>\n            <p>$CD = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.</p>\n          "
           },
           {
+            "id": "rep_n5",
+            "level": 2,
+            "title": "Niveau 2 : Retrouver une extrémité à partir du milieu",
+            "question": "<p>$M(1\\,;\\,2)$ est le milieu de $[AB]$ avec $A(-3\\,;\\,5)$. Quelles sont les coordonnées de $B$ ?</p>",
+            "options": [
+              {
+                "text": "$B(5\\,;\\,-1)$",
+                "isCorrect": true
+              },
+              {
+                "text": "$B(-1\\,;\\,3{,}5)$",
+                "isCorrect": false
+              },
+              {
+                "text": "$B(4\\,;\\,3)$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 2)</h4>\n            <p>On utilise les formules du milieu à l'envers. Pour l'abscisse : $\\dfrac{x_A + x_B}{2} = 1 \\Rightarrow x_A + x_B = 2 \\Rightarrow -3 + x_B = 2 \\Rightarrow x_B = 5$.</p>\n            <p>Pour l'ordonnée : $\\dfrac{y_A + y_B}{2} = 2 \\Rightarrow 5 + y_B = 4 \\Rightarrow y_B = -1$.</p>\n            <p>Donc $B(5\\,;\\,-1)$.</p>\n          "
+          },
+          {
             "id": "rep_n3",
             "level": 3,
             "title": "Niveau 3 : Tester l'alignement de trois points",
@@ -1410,13 +1547,14 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 4 (Niveau 3)</h4>\n            <p>On calcule les trois longueurs avec la formule $AB = \\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}$ :</p>\n            <p>$AB = \\sqrt{(4-0)^2+(0-0)^2} = \\sqrt{16} = 4$</p>\n            <p>$AC = \\sqrt{(2-0)^2+(3-0)^2} = \\sqrt{4+9} = \\sqrt{13} \\approx 3,61$</p>\n            <p>$BC = \\sqrt{(2-4)^2+(3-0)^2} = \\sqrt{4+9} = \\sqrt{13} \\approx 3,61$</p>\n            <p>On observe que $AC = BC = \\sqrt{13}$, mais $AB = 4 \\neq \\sqrt{13}$. Le triangle a donc exactement deux côtés égaux : il est <strong>isocèle en $C$</strong> (le sommet entre les deux côtés égaux).</p>\n            <p>Il n'est pas équilatéral car les trois côtés ne sont pas tous égaux.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "4e→2de"
       },
       {
         "id": "vecteurs",
         "title": "Chapitre 2 : Vecteurs et translations",
         "icon": "➡️",
-        "courseHtml": "\n        <h3>Les Vecteurs</h3>\n        <p>Un vecteur est caractérisé par une direction, un sens et une norme (longueur).</p>\n        <p>Les coordonnées du vecteur $\\vec{AB}$ sont :</p>\n        <div class=\"formula\">\n          <p>$$\\vec{AB} \\begin{pmatrix} x_B - x_A \\\\ y_B - y_A \\end{pmatrix}$$</p>\n        </div>\n        <div class=\"card-tip\">\n          Deux vecteurs sont égaux si et seulement s'ils ont les mêmes coordonnées.\n        </div>\n      ",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Un vecteur représente un <strong>déplacement</strong> : il a une direction, un sens et une longueur (sa <strong>norme</strong>). Les vecteurs sont l'outil de base pour étudier les droites, le parallélisme et l'alignement en Première.</p>\n\n        <h3>1. Coordonnées d'un vecteur</h3>\n        <p>Le vecteur $\\vec{AB}$ qui va de $A(x_A\\,;\\,y_A)$ vers $B(x_B\\,;\\,y_B)$ a pour coordonnées la différence « arrivée moins départ » :</p>\n        <div class=\"formula\">\n          <p>$$\\vec{AB}\\begin{pmatrix} x_B - x_A \\\\ y_B - y_A \\end{pmatrix}$$</p>\n        </div>\n        <p><strong>Exemple :</strong> pour $A(2\\,;\\,-1)$ et $B(5\\,;\\,3)$ : $\\vec{AB}\\begin{pmatrix} 5-2 \\\\ 3-(-1) \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Sens de calcul :</strong> c'est toujours « coordonnées de l'arrivée moins coordonnées du départ ». $\\vec{AB}$ et $\\vec{BA}$ sont opposés : ils ont des coordonnées de signes contraires.\n        </div>\n\n        <h3>2. Égalité de vecteurs et opérations</h3>\n        <div class=\"card-tip\">\n          Deux vecteurs sont <strong>égaux</strong> si et seulement s'ils ont les mêmes coordonnées. On additionne deux vecteurs en additionnant leurs coordonnées, et on multiplie un vecteur par un nombre en multipliant chaque coordonnée.\n        </div>\n        <p>$\\vec{u}\\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$, $\\vec{v}\\begin{pmatrix} -3 \\\\ 2 \\end{pmatrix} \\Rightarrow \\vec{u} + \\vec{v}\\begin{pmatrix} -2 \\\\ 6 \\end{pmatrix}$.</p>\n\n        <h3>3. Colinéarité</h3>\n        <p>Deux vecteurs sont <strong>colinéaires</strong> (de même direction) si l'un est un multiple de l'autre. Le test pratique utilise le « produit en croix » :</p>\n        <div class=\"formula\">\n          <p>$$\\vec{u}\\begin{pmatrix} x \\\\ y \\end{pmatrix},\\ \\vec{v}\\begin{pmatrix} x' \\\\ y' \\end{pmatrix} \\text{ colinéaires} \\iff x\\,y' - y\\,x' = 0$$</p>\n        </div>\n        <p><strong>Exemple :</strong> $\\vec{u}\\begin{pmatrix} -2 \\\\ 5 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 6 \\\\ -15 \\end{pmatrix}$ : $(-2)\\times(-15) - 5\\times 6 = 30 - 30 = 0$, donc ils sont colinéaires.</p>\n\n        <div class=\"card-tip\">\n          <strong>À quoi ça sert :</strong> la colinéarité permet de prouver que deux droites sont <strong>parallèles</strong>, que trois points sont <strong>alignés</strong> ($\\vec{AB}$ et $\\vec{AC}$ colinéaires), ou de trouver le 4ᵉ sommet d'un parallélogramme ($\\vec{AB} = \\vec{DC}$).\n        </div>\n      ",
         "exercises": [
           {
             "id": "vec_n1",
@@ -1438,6 +1576,27 @@ const COURSE_DATA = [
               }
             ],
             "correction": "\n            <h4>Correction de l'exercice 1 (Niveau 1)</h4>\n            <p>$x = x_B - x_A = 5 - 2 = 3$</p>\n            <p>$y = y_B - y_A = 3 - (-1) = 4$</p>\n          "
+          },
+          {
+            "id": "vec_n6",
+            "level": 1,
+            "title": "Niveau 1 : Vecteur opposé",
+            "question": "<p>On a $\\vec{AB}\\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$. Quelles sont les coordonnées de $\\vec{BA}$ ?</p>",
+            "options": [
+              {
+                "text": "$\\begin{pmatrix} -3 \\\\ 2 \\end{pmatrix}$",
+                "isCorrect": true
+              },
+              {
+                "text": "$\\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$",
+                "isCorrect": false
+              },
+              {
+                "text": "$\\begin{pmatrix} 2 \\\\ -3 \\end{pmatrix}$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 1)</h4>\n            <p>$\\vec{BA}$ est le vecteur opposé de $\\vec{AB}$ : il a la même direction et la même longueur, mais le sens contraire.</p>\n            <p>On change donc le signe de chaque coordonnée : $\\vec{BA}\\begin{pmatrix} -3 \\\\ 2 \\end{pmatrix}$.</p>\n          "
           },
           {
             "id": "vec_n2",
@@ -1519,7 +1678,8 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 5 (Niveau 3)</h4>\n            <p>Deux vecteurs $\\vec{u}(x;y)$ et $\\vec{v}(x';y')$ sont colinéaires si et seulement si $xy' - yx' = 0$.</p>\n            <p>Ici : $2 \\times 9 - m \\times 6 = 0$, soit $18 - 6m = 0$.</p>\n            <p>On résout : $6m = 18$, donc $m = \\frac{18}{6} = 3$.</p>\n            <p><em>Vérification :</em> avec $m=3$, $\\vec{u}(2;3)$ et $\\vec{v}(6;9) = 3 \\times \\vec{u}$. On retrouve bien que $\\vec{v}$ est un multiple de $\\vec{u}$, donc colinéaire.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "2de"
       },
       {
         "id": "equations_cartesiennes",
@@ -1653,7 +1813,8 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p>Deux droites parallèles ont les mêmes coefficients $a$ et $b$ (à un facteur multiplicatif près) : on garde donc $a=2$ et $b=-1$, et on cherche la nouvelle constante $c'$.</p>\n            <p>L'équation de $d'$ est de la forme $2x-y+c'=0$. Comme $d'$ passe par $B(1;4)$ :</p>\n            <p>$$2\\times1 - 4 + c' = 0 \\Rightarrow 2-4+c'=0 \\Rightarrow c' = 2$$</p>\n            <p>L'équation de $d'$ est donc $2x-y+2=0$.</p>\n            <p><em>Vérification :</em> $2\\times1-4+2=2-4+2=0$ ✓.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "2de"
       },
       {
         "id": "trigonometrie",
@@ -1787,7 +1948,8 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p>On connaît l'adjacent ($5$) et l'hypoténuse ($13$) : on utilise le <strong>CAH</strong> :</p>\n            <p>$$\\cos(\\widehat{x}) = \\frac{\\text{Adjacent}}{\\text{Hypoténuse}} = \\frac{5}{13} \\approx 0,3846$$</p>\n            <p>Pour retrouver l'angle à partir de son cosinus, on utilise la touche $\\cos^{-1}$ (ou $\\arccos$) de la calculatrice :</p>\n            <p>$$\\widehat{x} = \\cos^{-1}(0,3846) \\approx 67,4° \\approx 67°$$</p>\n            <p><em>Remarque :</em> on reconnaît ici le triangle \"5-12-13\" (un triangle rectangle à côtés entiers, comme le triangle \"3-4-5\") : le troisième côté mesurerait $12$ cm, puisque $5^2+12^2=25+144=169=13^2$.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "3e→2de"
       }
     ]
   },
@@ -1928,13 +2090,14 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p><strong>Étape 1 — Moyenne :</strong> $\\bar{x} = \\frac{2+4+4+4+5+5+7+9}{8} = \\frac{40}{8} = 5$.</p>\n            <p><strong>Étape 2 — Variance :</strong> on calcule chaque écart à la moyenne, on l'élève au carré, puis on fait la moyenne de ces carrés :</p>\n            <p>$(2-5)^2=9$, $(4-5)^2=1$ (×3), $(5-5)^2=0$ (×2), $(7-5)^2=4$, $(9-5)^2=16$.</p>\n            <p>$$V = \\frac{9+1+1+1+0+0+4+16}{8} = \\frac{32}{8} = 4$$</p>\n            <p><strong>Étape 3 — Écart-type :</strong> $\\sigma = \\sqrt{V} = \\sqrt{4} = 2$.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "4e→2de"
       },
       {
         "id": "statistiques",
         "title": "Chapitre 1 : Statistiques descriptives",
         "icon": "📊",
-        "courseHtml": "\n        <h3>Moyenne et Médiane</h3>\n        <p>La <strong>moyenne</strong> est la somme de toutes les valeurs divisée par l'effectif total.</p>\n        <p>La <strong>médiane</strong> est la valeur qui sépare la série ordonnée en deux groupes de même effectif (50% des valeurs sont inférieures, 50% sont supérieures).</p>\n      ",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Les statistiques servent à <strong>résumer</strong> une série de données par quelques nombres clés. On distingue les indicateurs de <strong>position</strong> (moyenne, médiane), qui donnent une valeur « centrale », et les indicateurs de <strong>dispersion</strong> (étendue), qui mesurent l'écart entre les valeurs.</p>\n\n        <h3>1. La moyenne</h3>\n        <p>La moyenne $\\bar{x}$ est la somme de toutes les valeurs divisée par l'effectif total $N$ :</p>\n        <div class=\"formula\">\n          <p>$$\\bar{x} = \\frac{x_1 + x_2 + \\dots + x_N}{N}$$</p>\n        </div>\n        <p><strong>Exemple :</strong> pour la série $10, 12, 14, 16$ : $\\bar{x} = \\dfrac{10+12+14+16}{4} = \\dfrac{52}{4} = 13$.</p>\n\n        <h3>2. La médiane</h3>\n        <p>La médiane partage la série <strong>ordonnée</strong> en deux groupes de même effectif : au moins 50 % des valeurs lui sont inférieures ou égales, au moins 50 % supérieures ou égales.</p>\n        <div class=\"card-tip\">\n          <strong>Méthode :</strong> on range d'abord les valeurs dans l'ordre croissant. Si l'effectif $N$ est <strong>impair</strong>, la médiane est la valeur du milieu. Si $N$ est <strong>pair</strong>, c'est la moyenne des deux valeurs centrales.\n        </div>\n        <p><strong>Exemple :</strong> série $3, 7, 8, 12, 15$ (déjà ordonnée, $N = 5$ impair) : la valeur centrale est la 3ᵉ, donc la médiane vaut $8$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Moyenne ≠ médiane :</strong> la moyenne est sensible aux valeurs extrêmes, pas la médiane. Une seule valeur très grande peut tirer la moyenne vers le haut sans bouger la médiane.\n        </div>\n\n        <h3>3. L'étendue</h3>\n        <p>L'étendue mesure la dispersion : c'est la différence entre la plus grande et la plus petite valeur. Pour $3, 7, 8, 12, 15$, l'étendue vaut $15 - 3 = 12$.</p>\n        <div class=\"card-tip\">\n          L'écart-type, autre indicateur de dispersion plus fin, est étudié en détail dans le chapitre « Pourcentages, évolutions et écart-type ».\n        </div>\n      ",
         "exercises": [
           {
             "id": "stat_n1",
@@ -1977,14 +2140,57 @@ const COURSE_DATA = [
               }
             ],
             "correction": "\n            <h4>Correction de l'exercice 2 (Niveau 2)</h4>\n            <p>La série est ordonnée. Il y a 5 valeurs (impair). La médiane est la 3ème valeur : 8.</p>\n          "
+          },
+          {
+            "id": "stat_n3",
+            "level": 2,
+            "title": "Niveau 2 : Médiane d'un effectif pair",
+            "question": "<p>Quelle est la médiane de la série ordonnée : $4, 6, 9, 11, 14, 20$ ?</p>",
+            "options": [
+              {
+                "text": "$10$",
+                "isCorrect": true
+              },
+              {
+                "text": "$9$",
+                "isCorrect": false
+              },
+              {
+                "text": "$11$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 2)</h4>\n            <p>L'effectif est $N = 6$ (pair). La médiane est la moyenne des deux valeurs centrales, c'est-à-dire la 3ᵉ et la 4ᵉ : $9$ et $11$.</p>\n            <p>Médiane $= \\dfrac{9 + 11}{2} = \\dfrac{20}{2} = 10$.</p>\n          "
+          },
+          {
+            "id": "stat_n4",
+            "level": 3,
+            "title": "Niveau 3 : Moyenne pondérée par les effectifs",
+            "question": "<p>Dans une classe, 5 élèves ont eu $8$, 10 élèves ont eu $12$ et 5 élèves ont eu $16$. Quelle est la moyenne de la classe ?</p>",
+            "options": [
+              {
+                "text": "$12$",
+                "isCorrect": true
+              },
+              {
+                "text": "$12{,}5$",
+                "isCorrect": false
+              },
+              {
+                "text": "$36$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 3)</h4>\n            <p>On pondère chaque note par son effectif. Effectif total : $5 + 10 + 5 = 20$.</p>\n            <p>Somme des notes : $5\\times 8 + 10\\times 12 + 5\\times 16 = 40 + 120 + 80 = 240$.</p>\n            <p>Moyenne $= \\dfrac{240}{20} = 12$.</p>\n            <p>⚠️ Il ne faut surtout pas faire $\\dfrac{8+12+16}{3}$ : il faut tenir compte du nombre d'élèves ayant obtenu chaque note.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "3e→2de"
       },
       {
         "id": "probas",
         "title": "Chapitre 2 : Probabilités simples",
         "icon": "🎲",
-        "courseHtml": "\n        <h3>Probabilités</h3>\n        <p>La probabilité d'un événement se situe toujours entre 0 et 1.</p>\n        <p>L'événement contraire $\\overline{A}$ vérifie : $P(\\overline{A}) = 1 - P(A)$.</p>\n        <p>Pour la réunion et l'intersection : $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.</p>\n      ",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Une probabilité mesure la <strong>chance</strong> qu'un événement se produise. Elle s'exprime par un nombre compris entre $0$ (événement impossible) et $1$ (événement certain). C'est une base indispensable pour la Première.</p>\n\n        <h3>1. Vocabulaire</h3>\n        <ul>\n          <li>Une <strong>expérience aléatoire</strong> a plusieurs issues possibles, dont on ne connaît pas le résultat à l'avance (lancer un dé, tirer une carte...).</li>\n          <li>Un <strong>événement</strong> est un ensemble d'issues (par exemple « obtenir un nombre pair »).</li>\n          <li>La probabilité d'un événement $A$ se note $P(A)$, avec $0 \\le P(A) \\le 1$.</li>\n        </ul>\n\n        <h3>2. Situation d'équiprobabilité</h3>\n        <p>Quand toutes les issues ont la même chance de se produire (dé équilibré, tirage au hasard), on calcule :</p>\n        <div class=\"formula\">\n          <p>$$P(A) = \\frac{\\text{nombre d'issues favorables}}{\\text{nombre d'issues possibles}}$$</p>\n        </div>\n        <p><strong>Exemple :</strong> dans un jeu de 32 cartes, il y a 4 as. La probabilité de tirer un as est $P = \\dfrac{4}{32} = \\dfrac{1}{8}$.</p>\n\n        <h3>3. L'événement contraire</h3>\n        <div class=\"card-tip\">\n          L'événement contraire de $A$, noté $\\overline{A}$, se réalise exactement quand $A$ ne se réalise pas. Leurs probabilités sont liées par : $P(\\overline{A}) = 1 - P(A)$.\n        </div>\n        <p><strong>Exemple :</strong> si $P(A) = 0{,}3$, alors $P(\\overline{A}) = 1 - 0{,}3 = 0{,}7$.</p>\n\n        <h3>4. Réunion et intersection</h3>\n        <p>Pour deux événements, $A \\cup B$ (« $A$ <strong>ou</strong> $B$ ») et $A \\cap B$ (« $A$ <strong>et</strong> $B$ ») sont reliés par :</p>\n        <div class=\"formula\">\n          <p>$$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$$</p>\n        </div>\n        <p>On retire $P(A \\cap B)$ pour ne pas compter deux fois les issues communes aux deux événements.</p>\n\n        <div class=\"card-warning\">\n          <strong>Toujours vérifier :</strong> une probabilité est toujours entre $0$ et $1$. Si un calcul donne un résultat négatif ou supérieur à $1$, c'est qu'il y a une erreur.\n        </div>\n      ",
         "exercises": [
           {
             "id": "prob_n1",
@@ -2027,8 +2233,51 @@ const COURSE_DATA = [
               }
             ],
             "correction": "\n            <h4>Correction de l'exercice 2 (Niveau 2)</h4>\n            <p>Il y a 4 as dans un jeu de 32 cartes. $P(As) = \\frac{4}{32} = \\frac{1}{8}$.</p>\n          "
+          },
+          {
+            "id": "prob_n3",
+            "level": 2,
+            "title": "Niveau 2 : Probabilité avec un dé",
+            "question": "<p>On lance un dé équilibré à 6 faces. Quelle est la probabilité d'obtenir un nombre <strong>pair</strong> ?</p>",
+            "options": [
+              {
+                "text": "$\\dfrac{1}{2}$",
+                "isCorrect": true
+              },
+              {
+                "text": "$\\dfrac{1}{3}$",
+                "isCorrect": false
+              },
+              {
+                "text": "$\\dfrac{1}{6}$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 2)</h4>\n            <p>Les issues favorables (nombres pairs) sont $2, 4, 6$ : il y en a $3$. Le nombre total d'issues est $6$.</p>\n            <p>Par équiprobabilité : $P = \\dfrac{3}{6} = \\dfrac{1}{2}$.</p>\n          "
+          },
+          {
+            "id": "prob_n4",
+            "level": 3,
+            "title": "Niveau 3 : Utiliser l'événement contraire",
+            "question": "<p>On lance deux fois une pièce équilibrée. Quelle est la probabilité d'obtenir <strong>au moins une fois</strong> « Pile » ?</p>",
+            "options": [
+              {
+                "text": "$\\dfrac{3}{4}$",
+                "isCorrect": true
+              },
+              {
+                "text": "$\\dfrac{1}{2}$",
+                "isCorrect": false
+              },
+              {
+                "text": "$\\dfrac{1}{4}$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 3)</h4>\n            <p>Les issues possibles sont : PP, PF, FP, FF (4 issues équiprobables).</p>\n            <p>Le plus simple est de passer par l'événement contraire de « au moins une fois Pile », qui est « <strong>aucun</strong> Pile », c'est-à-dire FF : une seule issue, de probabilité $\\dfrac{1}{4}$.</p>\n            <p>Donc $P(\\text{au moins un Pile}) = 1 - \\dfrac{1}{4} = \\dfrac{3}{4}$.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "3e→2de"
       }
     ]
   },
@@ -2169,7 +2418,8 @@ const COURSE_DATA = [
             ],
             "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p>On initialise <code>maximum</code> avec le premier élément de la liste : <code>maximum = 3</code>.</p>\n            <p>Puis on parcourt chaque valeur de la liste et on met à jour <code>maximum</code> chaque fois qu'on trouve une valeur plus grande :</p>\n            <p>$3$ (initial) → on compare à $3$ : pas plus grand, $\\texttt{maximum}=3$<br>\n            → on compare à $7$ : $7>3$, donc $\\texttt{maximum}=7$<br>\n            → on compare à $2$ : pas plus grand, $\\texttt{maximum}=7$<br>\n            → on compare à $9$ : $9>7$, donc $\\texttt{maximum}=9$<br>\n            → on compare à $4$ : pas plus grand, $\\texttt{maximum}=9$</p>\n            <p>À la fin, <code>maximum</code> vaut <code>9</code>, qui est bien le plus grand élément de la liste.</p>\n          "
           }
-        ]
+        ],
+        "yearLevel": "2de"
       }
     ]
   }

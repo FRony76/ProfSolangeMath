@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prof pour Solange - Vers la Spé Maths 1ère</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Une application web interactive pour combler ses lacunes en mathématiques et aborder sereinement la Spécialité de Première Générale avec le soutien bienveillant du Professeur Solange.">
+  <meta name="author" content="Prof pour Solange Team">
+  
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- KaTeX JS (Deferred to load in background) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  
+  <!-- KaTeX Auto-render Extension -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Content & App Logic scripts -->
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Desktop Sidebar (Hidden on Mobile) -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">f(x)</div>
+        <div class="brand-title">
+          <h1>Prof pour Solange</h1>
+          <div class="brand-subtitle">Spé Maths 1ère</div>
+        </div>
+      </div>
+      
+      <nav class="nav-menu">
+        <a href="#" class="nav-item active" data-target="dashboard" id="nav-dashboard">
+          <span>🏠</span> Tableau de bord
+        </a>
+        <a href="#" class="nav-item" data-target="progress" id="nav-progress">
+          <span>📊</span> Mon Progrès
+        </a>
+        <a href="#" class="nav-item" data-target="reset" id="nav-reset" style="margin-top: 1.5rem; color: #ef4444;">
+          <span>⚙️</span> Réinitialiser
+        </a>
+      </nav>
+
+      <!-- Virtual Coach Widget -->
+      <div class="coach-widget">
+        <div class="coach-header">
+          <div class="coach-avatar">👩‍🏫</div>
+          <div class="coach-info">
+            <h4>Prof. Solange</h4>
+            <p>Ton coach bienveillant</p>
+          </div>
+        </div>
+        <div class="coach-speech" id="coach-bubble">
+          Bonjour ! Prête à conquérir le programme de maths aujourd'hui ? Chaque petit pas te rapproche de la Spécialité de Première ! 💪
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <header class="header-bar">
+        <h2>Calcul & Algèbre</h2>
+        
+        <!-- Global Progress Header Widget -->
+        <div class="progress-header">
+          <span class="progress-text">Progression :</span>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progress-fill"></div>
+          </div>
+          <span class="progress-text" id="progress-label">0%</span>
+        </div>
+      </header>
+
+      <!-- Dynamic Screen Content Insertion -->
+      <section id="view-content" aria-live="polite">
+        <!-- Rendered dynamically via app.js -->
+      </section>
+    </main>
+
+    <!-- Mobile Bottom Navigation (Hidden on Desktop) -->
+    <nav class="mobile-nav" aria-label="Navigation mobile">
+      <a href="#" class="mobile-nav-item active" data-target="dashboard">
+        <span>🏠</span>
+        <div>Accueil</div>
+      </a>
+      <a href="#" class="mobile-nav-item" data-target="progress">
+        <span>📊</span>
+        <div>Progrès</div>
+      </a>
+      <a href="#" class="mobile-nav-item" data-target="reset" style="color: #ef4444;">
+        <span>⚙️</span>
+        <div>Réinitialiser</div>
+      </a>
+    </nav>
+
+  </div>
+
+</body>
+</html>

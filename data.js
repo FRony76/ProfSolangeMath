@@ -6,7 +6,7 @@ const COURSE_DATA = [
     "chapters": [
       {
         "id": "ensembles_nombres",
-        "title": "Chapitre 0 : Les Ensembles de Nombres",
+        "title": "Chapitre 1 : Les Ensembles de Nombres",
         "icon": "🧩",
         "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Avant de calculer, il faut savoir <strong>dans quel \"monde\" de nombres</strong> on se trouve. Les mathématiciens ont classé les nombres en plusieurs familles, les unes incluses dans les autres, comme des poupées russes.</p>\n\n        <h3>1. Les cinq grands ensembles</h3>\n        <ul>\n          <li><strong>$\\mathbb{N}$</strong> — les entiers <strong>naturels</strong> : $0, 1, 2, 3, 4, \\dots$ (jamais négatifs, jamais à virgule).</li>\n          <li><strong>$\\mathbb{Z}$</strong> — les entiers <strong>relatifs</strong> : tous les entiers, positifs ou négatifs : $\\dots, -2, -1, 0, 1, 2, \\dots$</li>\n          <li><strong>$\\mathbb{D}$</strong> — les <strong>décimaux</strong> : tous les nombres qui s'écrivent avec un nombre <em>fini</em> de chiffres après la virgule (ex : $3,25$ ; $-7$ ; $0,5$).</li>\n          <li><strong>$\\mathbb{Q}$</strong> — les <strong>rationnels</strong> : tous les nombres qui peuvent s'écrire comme une fraction $\\frac{a}{b}$ avec $a \\in \\mathbb{Z}$ et $b \\in \\mathbb{Z}^*$ (un entier divisé par un entier non nul). Cela inclut des nombres à virgule <em>infinie mais répétitive</em>, comme $\\frac{1}{3} = 0,333...$</li>\n          <li><strong>$\\mathbb{R}$</strong> — les <strong>réels</strong> : absolument tous les nombres utilisés au lycée, y compris les <strong>irrationnels</strong> comme $\\sqrt{2}$ ou $\\pi$, qui ont une infinité de décimales <em>non répétitives</em> et ne peuvent jamais s'écrire en fraction exacte.</li>\n        </ul>\n\n        <div class=\"card-warning\">\n          <strong>Piège classique :</strong> $\\frac{1}{3}$ est un nombre <strong>rationnel</strong> ($\\mathbb{Q}$) mais <strong>pas décimal</strong> ($\\mathbb{D}$), car son écriture décimale $0,333...$ ne s'arrête jamais ! En revanche, $0,75 = \\frac{3}{4}$ est à la fois décimal et rationnel.\n        </div>\n\n        <h3>2. L'inclusion des ensembles</h3>\n        <p>Chaque ensemble est <strong>inclus</strong> dans le suivant (symbole $\\subset$) :</p>\n        <div class=\"formula\">\n          <p>$$\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{D} \\subset \\mathbb{Q} \\subset \\mathbb{R}$$</p>\n        </div>\n        <p>Cela signifie que tout nombre naturel est aussi un entier relatif, qui est aussi un décimal, etc. Mais l'inverse est faux : $-5$ est un entier relatif ($\\mathbb{Z}$) mais pas un entier naturel ($\\mathbb{N}$), puisqu'il est négatif.</p>\n\n        <h3>3. Le vocabulaire des ensembles</h3>\n        <ul>\n          <li><strong>$\\in$</strong> se lit \"appartient à\". Exemple : $3 \\in \\mathbb{N}$ (3 appartient à $\\mathbb{N}$).</li>\n          <li><strong>$\\notin$</strong> se lit \"n'appartient pas à\". Exemple : $\\sqrt{2} \\notin \\mathbb{Q}$.</li>\n          <li><strong>$\\subset$</strong> se lit \"est inclus dans\". Exemple : $\\mathbb{N} \\subset \\mathbb{R}$.</li>\n          <li><strong>$\\cap$</strong> (intersection) : les éléments communs à deux ensembles.</li>\n          <li><strong>$\\cup$</strong> (réunion) : tous les éléments d'au moins un des deux ensembles.</li>\n        </ul>\n\n        <div class=\"card-tip\">\n          <strong>Astuce pour reconnaître un irrationnel :</strong> si un nombre contient une racine carrée d'un nombre qui n'est pas un carré parfait (comme $\\sqrt{2}$, $\\sqrt{3}$, $\\sqrt{5}$...) ou s'il s'agit de $\\pi$, il est irrationnel : il appartient à $\\mathbb{R}$ mais pas à $\\mathbb{Q}$.\n        </div>\n      ",
         "exercises": [
@@ -141,7 +141,7 @@ const COURSE_DATA = [
       },
       {
         "id": "fractions",
-        "title": "Chapitre 1 : Les Fractions",
+        "title": "Chapitre 2 : Les Fractions",
         "icon": "🔢",
         "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Les fractions sont le cauchemar de beaucoup d'élèves, mais elles sont pourtant indispensables en Première ! En Spécialité Mathématiques, on ne travaille presque plus avec des nombres décimaux (comme 0,33). On garde toujours les valeurs exactes sous forme de fractions simplifiées.</p>\n        \n        <div class=\"card-tip\">\n          <strong>Règle d'or :</strong> On ne peut additionner ou soustraire des fractions <em>que</em> si elles ont le <strong>même dénominateur</strong> (le nombre du bas). Pour la multiplication et la division, ce n'est pas nécessaire !\n        </div>\n\n        <h3>1. Addition et Soustraction</h3>\n        <p>Pour additionner ou soustraire deux fractions, on trouve un dénominateur commun :</p>\n        <div class=\"formula\">\n          <p>$$\\frac{a}{b} + \\frac{c}{d} = \\frac{a \\times d}{b \\times d} + \\frac{c \\times b}{d \\times b} = \\frac{ad + cb}{bd}$$</p>\n        </div>\n        <p><strong>Exemple concret :</strong> Calculons $A = \\frac{2}{3} + \\frac{5}{6}$.<br>\n        Ici, le dénominateur commun est $6$ (car $6 = 3 \\times 2$).<br>\n        $A = \\frac{2 \\times 2}{3 \\times 2} + \\frac{5}{6} = \\frac{4}{6} + \\frac{5}{6} = \\frac{4+5}{6} = \\frac{9}{6}$<br>\n        On simplifie ensuite en divisant le haut et le bas par $3$ : $A = \\frac{3}{2}$.</p>\n\n        <h3>2. Multiplication et Division</h3>\n        <p><strong>La multiplication</strong> est l'opération la plus simple : on multiplie les numérateurs entre eux et les dénominateurs entre eux.</p>\n        <div class=\"formula\">\n          <p>$$\\frac{a}{b} \\times \\frac{c}{d} = \\frac{a \\times c}{b \\times d}$$</p>\n        </div>\n        <p><em>Astuce pédagogique :</em> Simplifie toujours avant de faire les grands calculs !</p>\n        <p><strong>La division</strong> consiste à multiplier la première fraction par l'inverse de la deuxième.</p>\n        <div class=\"formula\">\n          <p>$$\\frac{\\frac{a}{b}}{\\frac{c}{d}} = \\frac{a}{b} \\times \\frac{d}{c} = \\frac{ad}{bc}$$</p>\n        </div>\n        <p><strong>Exemple :</strong> Diviser par $\\frac{3}{4}$, c'est multiplier par $\\frac{4}{3}$.</p>\n      ",
         "exercises": [
@@ -276,7 +276,7 @@ const COURSE_DATA = [
       },
       {
         "id": "puissances",
-        "title": "Chapitre 2 : Les Puissances",
+        "title": "Chapitre 3 : Les Puissances",
         "icon": "⚡",
         "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Les puissances permettent d'écrire de façon courte une multiplication d'un même nombre par lui-même, et de manipuler aussi bien de très grands que de très petits nombres. En Première, elles reviennent partout : en calcul, en notation scientifique et dans l'étude des fonctions.</p>\n\n        <div class=\"card-tip\">\n          <strong>Définition :</strong> pour un nombre $a$ et un entier $n \\ge 1$, $a^n = \\underbrace{a \\times a \\times \\dots \\times a}_{n \\text{ facteurs}}$. Par convention, $a^0 = 1$ (pour $a \\neq 0$) et $a^1 = a$.\n        </div>\n\n        <h3>1. Les cinq règles fondamentales</h3>\n        <p>Tout le calcul sur les puissances repose sur ces cinq règles. Il faut les connaître par cœur.</p>\n        <div class=\"formula\">\n          <p>$$a^n \\times a^p = a^{n+p} \\qquad \\frac{a^n}{a^p} = a^{n-p} \\qquad (a^n)^p = a^{n \\times p}$$</p>\n          <p>$$(a \\times b)^n = a^n \\times b^n \\qquad a^{-n} = \\frac{1}{a^n}$$</p>\n        </div>\n        <p><strong>Exemple concret :</strong> $2^3 \\times 2^5 = 2^{3+5} = 2^8$. On <em>ajoute</em> les exposants quand on <em>multiplie</em> deux puissances d'un même nombre — on ne multiplie surtout pas les exposants !</p>\n\n        <div class=\"card-warning\">\n          <strong>Piège classique :</strong> $a^n \\times a^p$ n'est <strong>pas</strong> $a^{n \\times p}$. On additionne les exposants ($a^{n+p}$). La multiplication des exposants n'apparaît que pour une puissance de puissance : $(a^n)^p = a^{n\\times p}$.\n        </div>\n\n        <h3>2. Le signe d'une puissance</h3>\n        <ul>\n          <li>Une puissance d'un nombre <strong>positif</strong> est toujours positive.</li>\n          <li>Pour un nombre négatif : $(-a)^n$ est <strong>positif si $n$ est pair</strong>, <strong>négatif si $n$ est impair</strong>. Exemple : $(-2)^4 = 16$ mais $(-2)^3 = -8$.</li>\n        </ul>\n        <div class=\"card-warning\">\n          <strong>Attention aux parenthèses :</strong> $(-2)^4 = 16$ (on élève $-2$ à la puissance 4), mais $-2^4 = -(2^4) = -16$ (on élève seulement $2$, puis on prend l'opposé). Les parenthèses changent tout !\n        </div>\n\n        <h3>3. La notation scientifique</h3>\n        <p>Tout nombre peut s'écrire sous la forme $a \\times 10^n$ où $1 \\le a < 10$ (un seul chiffre non nul avant la virgule) et $n$ est un entier relatif.</p>\n        <div class=\"formula\">\n          <p>$$48\\,500 = 4{,}85 \\times 10^4 \\qquad 0{,}00037 = 3{,}7 \\times 10^{-4}$$</p>\n        </div>\n        <p><strong>Astuce :</strong> l'exposant de $10$ compte de combien de rangs on a déplacé la virgule. Vers la gauche → exposant positif ; vers la droite → exposant négatif.</p>\n      ",
         "exercises": [
@@ -411,7 +411,7 @@ const COURSE_DATA = [
       },
       {
         "id": "racines_valeur_absolue",
-        "title": "Chapitre 5 : Racines carrées et valeur absolue",
+        "title": "Chapitre 4 : Racines carrées et valeur absolue",
         "icon": "√",
         "courseHtml": "\n        <h3>Partie A — Les racines carrées</h3>\n\n        <h4>1. Définition</h4>\n        <p>La racine carrée d'un nombre positif $a$, notée $\\sqrt{a}$, est le nombre positif dont le carré vaut $a$. Par exemple $\\sqrt{9} = 3$ car $3^2 = 9$.</p>\n        <div class=\"card-warning\">\n          <strong>Attention :</strong> $\\sqrt{a}$ n'existe que si $a \\geqslant 0$. Et $\\sqrt{a}$ est <strong>toujours positif</strong> (ou nul), même si $a$ a deux racines carrées possibles en théorie ($3$ et $-3$ sont tous deux solutions de $x^2=9$, mais $\\sqrt{9}$ désigne uniquement la solution positive $3$).\n        </div>\n\n        <h4>2. Les deux règles de calcul fondamentales</h4>\n        <div class=\"formula\">\n          <p>$$\\sqrt{a \\times b} = \\sqrt{a} \\times \\sqrt{b} \\qquad \\text{et} \\qquad \\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}} \\quad (a \\geqslant 0, \\, b > 0)$$</p>\n        </div>\n        <div class=\"card-warning\">\n          <strong>Piège très fréquent :</strong> $\\sqrt{a+b} \\neq \\sqrt{a} + \\sqrt{b}$ ! Il n'existe <strong>aucune</strong> règle pour distribuer une racine sur une somme. Exemple : $\\sqrt{9+16} = \\sqrt{25} = 5$, alors que $\\sqrt{9}+\\sqrt{16} = 3+4 = 7$. Ce sont deux résultats différents !\n        </div>\n\n        <h4>3. Simplifier une racine carrée</h4>\n        <p>Pour simplifier $\\sqrt{75}$, on cherche le plus grand <strong>carré parfait</strong> (1, 4, 9, 16, 25, 36, 49...) qui divise $75$.</p>\n        <p>$75 = 25 \\times 3$, et $25$ est un carré parfait ($5^2=25$). Donc :</p>\n        <p>$$\\sqrt{75} = \\sqrt{25 \\times 3} = \\sqrt{25} \\times \\sqrt{3} = 5\\sqrt{3}$$</p>\n\n        <h4>4. Addition et soustraction de racines</h4>\n        <p>On ne peut additionner que des racines <strong>identiques</strong> (comme pour additionner $3x + 2x = 5x$ en calcul littéral) :</p>\n        <p><strong>Exemple :</strong> $\\sqrt{12} + \\sqrt{27} = \\sqrt{4 \\times 3} + \\sqrt{9 \\times 3} = 2\\sqrt{3} + 3\\sqrt{3} = 5\\sqrt{3}$</p>\n\n        <h4>5. Rationaliser un dénominateur</h4>\n        <p>On évite de laisser une racine carrée au dénominateur. Pour la faire disparaître, on multiplie en haut et en bas par cette même racine :</p>\n        <p>$$\\frac{1}{\\sqrt{5}} = \\frac{1 \\times \\sqrt{5}}{\\sqrt{5} \\times \\sqrt{5}} = \\frac{\\sqrt{5}}{5}$$</p>\n\n        <h3>Partie B — La valeur absolue</h3>\n\n        <h4>1. Définition</h4>\n        <p>La valeur absolue d'un nombre $x$, notée $|x|$, représente sa <strong>distance à zéro</strong> sur la droite numérique. Elle est toujours positive ou nulle.</p>\n        <div class=\"formula\">\n          <p>$$|x| = x \\text{ si } x \\geqslant 0 \\qquad \\qquad |x| = -x \\text{ si } x < 0$$</p>\n        </div>\n        <p><strong>Exemples :</strong> $|7| = 7$ (car $7 \\geqslant 0$) et $|-7| = -(-7) = 7$ (car $-7<0$).</p>\n\n        <div class=\"card-tip\">\n          <strong>Astuce :</strong> $|x|$ \"efface\" toujours le signe négatif. Plus généralement, $|x-a|$ représente la <strong>distance entre $x$ et $a$</strong> sur la droite numérique.\n        </div>\n\n        <h4>2. Résoudre une équation avec valeur absolue</h4>\n        <p>L'équation $|x-a| = r$ (avec $r > 0$) se traduit par : \"la distance entre $x$ et $a$ vaut $r$\". Cela donne <strong>deux solutions</strong> :</p>\n        <div class=\"formula\">\n          <p>$$x - a = r \\quad \\text{ou} \\quad x - a = -r$$</p>\n        </div>\n        <p><strong>Exemple :</strong> Résoudre $|x-3| = 5$.<br>\n        Cela signifie $x-3=5$ ou $x-3=-5$, donc $x=8$ ou $x=-2$.</p>\n      ",
         "exercises": [
@@ -546,7 +546,7 @@ const COURSE_DATA = [
       },
       {
         "id": "calcul_litteral",
-        "title": "Chapitre 3 : Calcul Littéral",
+        "title": "Chapitre 5 : Calcul Littéral",
         "icon": "🧬",
         "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Le calcul littéral, c'est calculer avec des lettres. Il est indispensable pour résoudre des équations, manipuler des fonctions et démontrer en Première. Deux gestes inverses reviennent sans cesse : <strong>développer</strong> (enlever les parenthèses) et <strong>factoriser</strong> (faire apparaître un produit).</p>\n\n        <h3>1. Développer avec la distributivité</h3>\n        <p>Développer, c'est transformer un produit en somme en distribuant la multiplication.</p>\n        <div class=\"formula\">\n          <p>$$k(a+b) = ka + kb \\qquad (a+b)(c+d) = ac + ad + bc + bd$$</p>\n        </div>\n        <p><strong>Exemple :</strong> $3x(2x-5) = 3x\\times 2x - 3x \\times 5 = 6x^2 - 15x$.</p>\n\n        <h3>2. Les trois identités remarquables</h3>\n        <p>Ce sont des développements à connaître par cœur : ils font gagner un temps précieux dans les deux sens.</p>\n        <div class=\"formula\">\n          <p>$$(a+b)^2 = a^2 + 2ab + b^2$$</p>\n          <p>$$(a-b)^2 = a^2 - 2ab + b^2$$</p>\n          <p>$$(a+b)(a-b) = a^2 - b^2$$</p>\n        </div>\n        <p><strong>Exemple :</strong> $(3x-2)^2 = (3x)^2 - 2\\times 3x \\times 2 + 2^2 = 9x^2 - 12x + 4$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Erreur très fréquente :</strong> $(a+b)^2 \\neq a^2 + b^2$ ! Il ne faut jamais oublier le double produit $2ab$ au milieu.\n        </div>\n\n        <h3>3. Factoriser</h3>\n        <p>Factoriser, c'est l'opération inverse de développer : on transforme une somme en produit. C'est indispensable pour résoudre les équations.</p>\n        <p><strong>Méthode 1 — facteur commun :</strong> on repère un facteur présent dans chaque terme et on le met en facteur.</p>\n        <div class=\"formula\">\n          <p>$$ka + kb = k(a+b)$$</p>\n        </div>\n        <p>Exemple : $(2x-3)(x+5) - (2x-3)^2$ : le facteur commun est $(2x-3)$, donc l'expression vaut $(2x-3)\\big[(x+5)-(2x-3)\\big] = (2x-3)(-x+8)$.</p>\n        <p><strong>Méthode 2 — identité remarquable $a^2-b^2$ :</strong> une différence de deux carrés se factorise toujours.</p>\n        <div class=\"formula\">\n          <p>$$a^2 - b^2 = (a+b)(a-b)$$</p>\n        </div>\n        <p>Exemple : $(x+2)^2 - 16 = (x+2)^2 - 4^2 = \\big[(x+2)+4\\big]\\big[(x+2)-4\\big] = (x+6)(x-2)$.</p>\n\n        <div class=\"card-tip\">\n          <strong>Réflexe :</strong> pour factoriser, cherche d'abord un facteur commun ; si tu n'en vois pas, regarde si tu as une différence de deux carrés ($\\dots - \\dots$ où chaque morceau est un carré).\n        </div>\n      ",
         "exercises": [
@@ -681,7 +681,7 @@ const COURSE_DATA = [
       },
       {
         "id": "equations_inequations",
-        "title": "Chapitre 4 : Équations & Inéquations",
+        "title": "Chapitre 6 : Équations & Inéquations",
         "icon": "⚖️",
         "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Résoudre une équation, c'est trouver toutes les valeurs de l'inconnue qui rendent l'égalité vraie. Résoudre une inéquation, c'est trouver toutes les valeurs qui rendent l'inégalité vraie : la réponse est alors un <strong>intervalle</strong> de solutions.</p>\n\n        <h3>1. Équation du premier degré</h3>\n        <p>On isole l'inconnue $x$ en regroupant les termes en $x$ d'un côté et les nombres de l'autre.</p>\n        <p><strong>Exemple :</strong> $5x - 7 = 2x + 5 \\Rightarrow 5x - 2x = 5 + 7 \\Rightarrow 3x = 12 \\Rightarrow x = 4$.</p>\n\n        <h3>2. L'équation produit nul</h3>\n        <p>C'est l'outil clé dès que le degré dépasse 1. Il repose sur une règle simple :</p>\n        <div class=\"card-tip\">\n          <strong>Règle du produit nul :</strong> un produit de facteurs est nul si et seulement si <strong>au moins un</strong> de ses facteurs est nul. $A \\times B = 0 \\iff A = 0 \\text{ ou } B = 0$.\n        </div>\n        <p><strong>Exemple :</strong> $(2x-5)(3x+9) = 0$ donne $2x-5 = 0$ ou $3x+9 = 0$, c'est-à-dire $x = \\dfrac{5}{2}$ ou $x = -3$.</p>\n\n        <h3>3. Équations du type $x^2 = k$</h3>\n        <ul>\n          <li>Si $k > 0$ : deux solutions, $x = \\sqrt{k}$ ou $x = -\\sqrt{k}$.</li>\n          <li>Si $k = 0$ : une seule solution, $x = 0$.</li>\n          <li>Si $k < 0$ : aucune solution (un carré n'est jamais négatif).</li>\n        </ul>\n        <p><strong>Exemple :</strong> $x^2 = 16 \\Rightarrow x = 4$ ou $x = -4$. Ne pas oublier la solution négative !</p>\n\n        <h3>4. Les inéquations</h3>\n        <p>On résout une inéquation presque comme une équation, avec UNE règle supplémentaire fondamentale :</p>\n        <div class=\"card-warning\">\n          <strong>Règle d'or des inéquations :</strong> si on multiplie ou si on divise les deux membres par un nombre <strong>négatif</strong>, on <strong>change le sens</strong> de l'inégalité ($\\le$ devient $\\ge$, et inversement).\n        </div>\n        <p><strong>Exemple :</strong> $-2x + 5 \\ge 7x - 4 \\Rightarrow -2x - 7x \\ge -4 - 5 \\Rightarrow -9x \\ge -9$. On divise par $-9$ (négatif), donc on inverse : $x \\le 1$. Solutions : $]-\\infty\\,;\\,1]$.</p>\n\n        <div class=\"card-tip\">\n          <strong>Astuce de présentation :</strong> les solutions d'une inéquation se donnent toujours sous forme d'intervalle, et on peut les visualiser sur une droite graduée.\n        </div>\n      ",
         "exercises": [
@@ -1071,6 +1071,120 @@ const COURSE_DATA = [
         "yearLevel": "3e→2de"
       },
       {
+        "id": "fonctions_affines",
+        "title": "Chapitre 2 : Fonctions Affines",
+        "icon": "📏",
+        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Les fonctions affines sont les fonctions les plus simples après les constantes, et leur courbe est toujours une <strong>droite</strong>. Les maîtriser est indispensable : elles servent de modèle dans énormément de situations (proportionnalité, coûts, vitesse...).</p>\n\n        <h3>1. Définition</h3>\n        <p>Une fonction affine est définie sur $\\mathbb{R}$ par $f(x) = ax + b$, où $a$ et $b$ sont deux nombres fixés.</p>\n        <ul>\n          <li><strong>$a$</strong> est le <strong>coefficient directeur</strong> (la pente de la droite) : il indique son inclinaison.</li>\n          <li><strong>$b$</strong> est l'<strong>ordonnée à l'origine</strong> : c'est l'ordonnée du point où la droite coupe l'axe vertical (en $x = 0$, $f(0) = b$).</li>\n        </ul>\n        <p>Cas particuliers : si $b = 0$, $f(x) = ax$ est <strong>linéaire</strong> (proportionnalité, droite passant par l'origine) ; si $a = 0$, $f(x) = b$ est <strong>constante</strong> (droite horizontale).</p>\n\n        <h3>2. Sens de variation</h3>\n        <div class=\"card-tip\">\n          Le sens de variation d'une fonction affine ne dépend <strong>que du signe de $a$</strong> :\n          <ul>\n            <li>si $a > 0$ : $f$ est <strong>croissante</strong> (la droite monte) ;</li>\n            <li>si $a < 0$ : $f$ est <strong>décroissante</strong> (la droite descend) ;</li>\n            <li>si $a = 0$ : $f$ est constante.</li>\n          </ul>\n        </div>\n\n        <h3>3. Le coefficient directeur à partir de deux points</h3>\n        <p>Si la droite passe par $A(x_A\\,;\\,y_A)$ et $B(x_B\\,;\\,y_B)$, alors :</p>\n        <div class=\"formula\">\n          <p>$$a = \\frac{y_B - y_A}{x_B - x_A}$$</p>\n        </div>\n        <p>C'est le <strong>taux d'accroissement</strong> : la variation des $y$ divisée par la variation des $x$.</p>\n        <p><strong>Exemple :</strong> pour $A(1\\,;\\,3)$ et $B(3\\,;\\,7)$ : $a = \\dfrac{7-3}{3-1} = \\dfrac{4}{2} = 2$. Puis on trouve $b$ avec $f(1) = 3$ : $2\\times 1 + b = 3$, donc $b = 1$. D'où $f(x) = 2x + 1$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Attention à l'ordre :</strong> dans la formule du coefficient directeur, il faut mettre les coordonnées de $A$ et $B$ dans le <strong>même ordre</strong> en haut et en bas. Si on inverse en haut, il faut inverser en bas aussi.\n        </div>\n      ",
+        "exercises": [
+          {
+            "id": "aff_n1",
+            "level": 1,
+            "title": "Niveau 1 : Identifier a et b",
+            "question": "<p>Quelle est l'ordonnée à l'origine de la fonction $f(x) = -3x + 7$ ?</p>",
+            "options": [
+              {
+                "text": "$7$",
+                "isCorrect": true
+              },
+              {
+                "text": "$-3$",
+                "isCorrect": false
+              },
+              {
+                "text": "$x$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction de l'exercice 1 (Niveau 1)</h4>\n            <p>Dans $f(x) = ax + b$, le nombre $b$ est l'ordonnée à l'origine. Ici, $b = 7$.</p>\n          "
+          },
+          {
+            "id": "aff_n2",
+            "level": 1,
+            "title": "Niveau 1 : Sens de variation",
+            "question": "<p>Parmi ces fonctions, laquelle est strictement croissante sur $\\mathbb{R}$ ?</p>",
+            "options": [
+              {
+                "text": "$g(x) = 2x - 5$",
+                "isCorrect": true
+              },
+              {
+                "text": "$f(x) = -4x + 10$",
+                "isCorrect": false
+              },
+              {
+                "text": "$h(x) = 8$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction de l'exercice 2 (Niveau 1)</h4>\n            <p>Le sens de variation d'une fonction affine dépend du signe de $a$ (coefficient directeur). Pour être croissante, il faut $a > 0$.<br>\n            Ici $a = 2$ pour $g$, donc $g$ est croissante.</p>\n          "
+          },
+          {
+            "id": "aff_n3",
+            "level": 2,
+            "title": "Niveau 2 : Déterminer l'expression à partir de deux points",
+            "question": "<p>Une droite passe par les points $A(1; 3)$ et $B(3; 7)$. Quelle est l'expression de la fonction affine $f$ qui lui est associée ?</p>",
+            "options": [
+              {
+                "text": "$f(x) = 2x + 1$",
+                "isCorrect": true
+              },
+              {
+                "text": "$f(x) = 2x - 1$",
+                "isCorrect": false
+              },
+              {
+                "text": "$f(x) = 3x + 1$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction de l'exercice 3 (Niveau 2)</h4>\n            <p>On calcule le coefficient directeur $a = \\frac{y_B - y_A}{x_B - x_A} = \\frac{7 - 3}{3 - 1} = \\frac{4}{2} = 2$.</p>\n            <p>La fonction s'écrit donc $f(x) = 2x + b$.<br>\n            Pour trouver $b$, on utilise un point, par exemple $A(1; 3)$. On sait que $f(1) = 3$.<br>\n            $2(1) + b = 3 \\implies b = 1$.</p>\n            <p>Donc $f(x) = 2x + 1$.</p>\n          "
+          },
+          {
+            "id": "aff_n5",
+            "level": 2,
+            "title": "Niveau 2 : Résoudre f(x) = 0",
+            "question": "<p>Soit $f(x) = -3x + 7$. En quelle valeur de $x$ la droite coupe-t-elle l'axe des abscisses ?</p>",
+            "options": [
+              {
+                "text": "$x = \\dfrac{7}{3}$",
+                "isCorrect": true
+              },
+              {
+                "text": "$x = 7$",
+                "isCorrect": false
+              },
+              {
+                "text": "$x = -\\dfrac{7}{3}$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction (Niveau 2)</h4>\n            <p>La droite coupe l'axe des abscisses là où $y = 0$, donc on résout $f(x) = 0$ :</p>\n            <p>$-3x + 7 = 0 \\Rightarrow -3x = -7 \\Rightarrow x = \\dfrac{-7}{-3} = \\dfrac{7}{3}$.</p>\n            <p>La droite coupe l'axe des abscisses au point d'abscisse $\\dfrac{7}{3}$.</p>\n          "
+          },
+          {
+            "id": "aff_n4",
+            "level": 3,
+            "title": "Niveau 3 : Taux d'accroissement",
+            "question": "<p>Soit $g$ une fonction affine telle que $g(5) = 12$ et $g(-2) = -2$. Quelle est la valeur de son coefficient directeur ?</p>",
+            "options": [
+              {
+                "text": "$a = 2$",
+                "isCorrect": true
+              },
+              {
+                "text": "$a = -2$",
+                "isCorrect": false
+              },
+              {
+                "text": "$a = 14$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction de l'exercice 4 (Niveau 3)</h4>\n            <p>Le taux d'accroissement est constant pour une fonction affine :<br>\n            $a = \\frac{g(x_2) - g(x_1)}{x_2 - x_1} = \\frac{12 - (-2)}{5 - (-2)} = \\frac{14}{7} = 2$.</p>\n          "
+          }
+        ],
+        "yearLevel": "3e→2de"
+      },
+      {
         "id": "fonctions_reference",
         "title": "Chapitre 3 : Les fonctions de référence",
         "icon": "📈",
@@ -1206,122 +1320,8 @@ const COURSE_DATA = [
         "yearLevel": "2de"
       },
       {
-        "id": "fonctions_affines",
-        "title": "Chapitre 2 : Fonctions Affines",
-        "icon": "📏",
-        "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Les fonctions affines sont les fonctions les plus simples après les constantes, et leur courbe est toujours une <strong>droite</strong>. Les maîtriser est indispensable : elles servent de modèle dans énormément de situations (proportionnalité, coûts, vitesse...).</p>\n\n        <h3>1. Définition</h3>\n        <p>Une fonction affine est définie sur $\\mathbb{R}$ par $f(x) = ax + b$, où $a$ et $b$ sont deux nombres fixés.</p>\n        <ul>\n          <li><strong>$a$</strong> est le <strong>coefficient directeur</strong> (la pente de la droite) : il indique son inclinaison.</li>\n          <li><strong>$b$</strong> est l'<strong>ordonnée à l'origine</strong> : c'est l'ordonnée du point où la droite coupe l'axe vertical (en $x = 0$, $f(0) = b$).</li>\n        </ul>\n        <p>Cas particuliers : si $b = 0$, $f(x) = ax$ est <strong>linéaire</strong> (proportionnalité, droite passant par l'origine) ; si $a = 0$, $f(x) = b$ est <strong>constante</strong> (droite horizontale).</p>\n\n        <h3>2. Sens de variation</h3>\n        <div class=\"card-tip\">\n          Le sens de variation d'une fonction affine ne dépend <strong>que du signe de $a$</strong> :\n          <ul>\n            <li>si $a > 0$ : $f$ est <strong>croissante</strong> (la droite monte) ;</li>\n            <li>si $a < 0$ : $f$ est <strong>décroissante</strong> (la droite descend) ;</li>\n            <li>si $a = 0$ : $f$ est constante.</li>\n          </ul>\n        </div>\n\n        <h3>3. Le coefficient directeur à partir de deux points</h3>\n        <p>Si la droite passe par $A(x_A\\,;\\,y_A)$ et $B(x_B\\,;\\,y_B)$, alors :</p>\n        <div class=\"formula\">\n          <p>$$a = \\frac{y_B - y_A}{x_B - x_A}$$</p>\n        </div>\n        <p>C'est le <strong>taux d'accroissement</strong> : la variation des $y$ divisée par la variation des $x$.</p>\n        <p><strong>Exemple :</strong> pour $A(1\\,;\\,3)$ et $B(3\\,;\\,7)$ : $a = \\dfrac{7-3}{3-1} = \\dfrac{4}{2} = 2$. Puis on trouve $b$ avec $f(1) = 3$ : $2\\times 1 + b = 3$, donc $b = 1$. D'où $f(x) = 2x + 1$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Attention à l'ordre :</strong> dans la formule du coefficient directeur, il faut mettre les coordonnées de $A$ et $B$ dans le <strong>même ordre</strong> en haut et en bas. Si on inverse en haut, il faut inverser en bas aussi.\n        </div>\n      ",
-        "exercises": [
-          {
-            "id": "aff_n1",
-            "level": 1,
-            "title": "Niveau 1 : Identifier a et b",
-            "question": "<p>Quelle est l'ordonnée à l'origine de la fonction $f(x) = -3x + 7$ ?</p>",
-            "options": [
-              {
-                "text": "$7$",
-                "isCorrect": true
-              },
-              {
-                "text": "$-3$",
-                "isCorrect": false
-              },
-              {
-                "text": "$x$",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction de l'exercice 1 (Niveau 1)</h4>\n            <p>Dans $f(x) = ax + b$, le nombre $b$ est l'ordonnée à l'origine. Ici, $b = 7$.</p>\n          "
-          },
-          {
-            "id": "aff_n2",
-            "level": 1,
-            "title": "Niveau 1 : Sens de variation",
-            "question": "<p>Parmi ces fonctions, laquelle est strictement croissante sur $\\mathbb{R}$ ?</p>",
-            "options": [
-              {
-                "text": "$g(x) = 2x - 5$",
-                "isCorrect": true
-              },
-              {
-                "text": "$f(x) = -4x + 10$",
-                "isCorrect": false
-              },
-              {
-                "text": "$h(x) = 8$",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction de l'exercice 2 (Niveau 1)</h4>\n            <p>Le sens de variation d'une fonction affine dépend du signe de $a$ (coefficient directeur). Pour être croissante, il faut $a > 0$.<br>\n            Ici $a = 2$ pour $g$, donc $g$ est croissante.</p>\n          "
-          },
-          {
-            "id": "aff_n3",
-            "level": 2,
-            "title": "Niveau 2 : Déterminer l'expression à partir de deux points",
-            "question": "<p>Une droite passe par les points $A(1; 3)$ et $B(3; 7)$. Quelle est l'expression de la fonction affine $f$ qui lui est associée ?</p>",
-            "options": [
-              {
-                "text": "$f(x) = 2x + 1$",
-                "isCorrect": true
-              },
-              {
-                "text": "$f(x) = 2x - 1$",
-                "isCorrect": false
-              },
-              {
-                "text": "$f(x) = 3x + 1$",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction de l'exercice 3 (Niveau 2)</h4>\n            <p>On calcule le coefficient directeur $a = \\frac{y_B - y_A}{x_B - x_A} = \\frac{7 - 3}{3 - 1} = \\frac{4}{2} = 2$.</p>\n            <p>La fonction s'écrit donc $f(x) = 2x + b$.<br>\n            Pour trouver $b$, on utilise un point, par exemple $A(1; 3)$. On sait que $f(1) = 3$.<br>\n            $2(1) + b = 3 \\implies b = 1$.</p>\n            <p>Donc $f(x) = 2x + 1$.</p>\n          "
-          },
-          {
-            "id": "aff_n5",
-            "level": 2,
-            "title": "Niveau 2 : Résoudre f(x) = 0",
-            "question": "<p>Soit $f(x) = -3x + 7$. En quelle valeur de $x$ la droite coupe-t-elle l'axe des abscisses ?</p>",
-            "options": [
-              {
-                "text": "$x = \\dfrac{7}{3}$",
-                "isCorrect": true
-              },
-              {
-                "text": "$x = 7$",
-                "isCorrect": false
-              },
-              {
-                "text": "$x = -\\dfrac{7}{3}$",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction (Niveau 2)</h4>\n            <p>La droite coupe l'axe des abscisses là où $y = 0$, donc on résout $f(x) = 0$ :</p>\n            <p>$-3x + 7 = 0 \\Rightarrow -3x = -7 \\Rightarrow x = \\dfrac{-7}{-3} = \\dfrac{7}{3}$.</p>\n            <p>La droite coupe l'axe des abscisses au point d'abscisse $\\dfrac{7}{3}$.</p>\n          "
-          },
-          {
-            "id": "aff_n4",
-            "level": 3,
-            "title": "Niveau 3 : Taux d'accroissement",
-            "question": "<p>Soit $g$ une fonction affine telle que $g(5) = 12$ et $g(-2) = -2$. Quelle est la valeur de son coefficient directeur ?</p>",
-            "options": [
-              {
-                "text": "$a = 2$",
-                "isCorrect": true
-              },
-              {
-                "text": "$a = -2$",
-                "isCorrect": false
-              },
-              {
-                "text": "$a = 14$",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction de l'exercice 4 (Niveau 3)</h4>\n            <p>Le taux d'accroissement est constant pour une fonction affine :<br>\n            $a = \\frac{g(x_2) - g(x_1)}{x_2 - x_1} = \\frac{12 - (-2)}{5 - (-2)} = \\frac{14}{7} = 2$.</p>\n          "
-          }
-        ],
-        "yearLevel": "3e→2de"
-      },
-      {
         "id": "fonctions_variations",
-        "title": "Chapitre 3 : Variations et Extremums",
+        "title": "Chapitre 4 : Variations et Extremums",
         "icon": "🎢",
         "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Étudier les variations d'une fonction, c'est dire sur quels intervalles elle <strong>monte</strong> (croissante) ou <strong>descend</strong> (décroissante) quand on parcourt l'axe des $x$ de gauche à droite. C'est l'une des compétences les plus utilisées en Première.</p>\n\n        <h3>1. Croissance et décroissance</h3>\n        <ul>\n          <li>$f$ est <strong>croissante</strong> sur un intervalle si, quand $x$ augmente, $f(x)$ augmente aussi (la courbe monte).</li>\n          <li>$f$ est <strong>décroissante</strong> sur un intervalle si, quand $x$ augmente, $f(x)$ diminue (la courbe descend).</li>\n        </ul>\n\n        <h3>2. Le tableau de variations</h3>\n        <p>On résume les variations dans un tableau : la première ligne donne les valeurs de $x$ (bornes et points où le sens change), la seconde indique le sens par des flèches montantes ↗ ou descendantes ↘, avec les valeurs aux extrémités.</p>\n\n        <h3>3. Les extremums</h3>\n        <div class=\"card-tip\">\n          Un <strong>extremum</strong> (maximum ou minimum) est atteint là où la fonction <strong>change de sens de variation</strong>. Un <strong>maximum</strong> correspond à un sommet (la courbe passe de ↗ à ↘) ; un <strong>minimum</strong> à un creux (de ↘ à ↗).\n        </div>\n        <p><strong>Exemple :</strong> si $f$ croît sur $[-5\\,;\\,2]$ puis décroît sur $[2\\,;\\,8]$, alors $f$ atteint son <strong>maximum en $x = 2$</strong>.</p>\n\n        <h3>4. Cas d'une fonction affine sur un intervalle</h3>\n        <p>Une fonction affine étant monotone, ses extremums sur un intervalle $[m\\,;\\,M]$ sont atteints aux <strong>bornes</strong>. Si $a < 0$ (décroissante), le maximum est en $x = m$ et le minimum en $x = M$.</p>\n        <p><strong>Exemple :</strong> $f(x) = -2x + 5$ sur $[-3\\,;\\,4]$ est décroissante, donc son maximum est $f(-3) = 6 + 5 = 11$.</p>\n\n        <div class=\"card-warning\">\n          <strong>Ne pas confondre :</strong> le <strong>tableau de signes</strong> indique où la courbe est au-dessus ($+$) ou en-dessous ($-$) de l'axe des abscisses ; le <strong>tableau de variations</strong> indique où la courbe monte ou descend. Ce sont deux études différentes !\n        </div>\n\n        <h3>5. Tableau de signes d'un produit</h3>\n        <p>Pour une fonction donnée sous forme factorisée comme $f(x) = (x-2)(x+3)$, on étudie le signe de chaque facteur, puis on applique la règle des signes du produit. Le produit s'annule en $x = 2$ et $x = -3$, et change de signe à chacune de ces valeurs.</p>\n      ",
         "exercises": [
@@ -1683,7 +1683,7 @@ const COURSE_DATA = [
       },
       {
         "id": "equations_cartesiennes",
-        "title": "Chapitre 4 : Équations cartésiennes de droites",
+        "title": "Chapitre 3 : Équations cartésiennes de droites",
         "icon": "📏",
         "courseHtml": "\n        <h3>Introduction</h3>\n        <p>Tu connais déjà la forme réduite d'une droite, $y=ax+b$. Il existe une autre façon d'écrire l'équation d'une droite, la <strong>forme cartésienne</strong>, qui a un avantage immense : elle permet de représenter <strong>toutes</strong> les droites, y compris les droites verticales (que la forme réduite ne peut pas décrire, car elles n'ont pas de coefficient directeur).</p>\n\n        <h3>1. La forme cartésienne</h3>\n        <div class=\"formula\">\n          <p>$$ax + by + c = 0 \\qquad \\text{avec } (a;b) \\neq (0;0)$$</p>\n        </div>\n        <p>Toute droite du plan peut s'écrire sous cette forme, où $a$, $b$ et $c$ sont des nombres réels.</p>\n\n        <h3>2. Passer de la forme réduite à la forme cartésienne</h3>\n        <p>C'est très simple : on regroupe tous les termes du même côté de l'égalité.</p>\n        <p><strong>Exemple :</strong> $y = 2x-3$ devient $2x - y - 3 = 0$ (on a juste tout mis à gauche).</p>\n\n        <h3>3. Le vecteur directeur d'une droite</h3>\n        <p>Une droite d'équation cartésienne $ax+by+c=0$ admet pour <strong>vecteur directeur</strong> le vecteur $\\vec{u}(-b ; a)$.</p>\n        <div class=\"card-tip\">\n          <strong>Astuce mnémotechnique :</strong> on \"échange $a$ et $b$, puis on change un des deux signes\" pour obtenir le vecteur directeur à partir de l'équation cartésienne.\n        </div>\n        <p><strong>Exemple :</strong> la droite $3x+2y-6=0$ a pour vecteur directeur $\\vec{u}(-2;3)$.</p>\n\n        <h3>4. Trouver l'équation cartésienne connaissant un point et un vecteur directeur</h3>\n        <p>Si une droite passe par le point $A(x_0;y_0)$ et a pour vecteur directeur $\\vec{u}(\\alpha;\\beta)$, alors un point $M(x;y)$ appartient à cette droite si et seulement si $\\vec{AM}$ et $\\vec{u}$ sont colinéaires, ce qui donne :</p>\n        <div class=\"formula\">\n          <p>$$\\beta(x-x_0) - \\alpha(y-y_0) = 0$$</p>\n        </div>\n        <p><strong>Exemple :</strong> Droite passant par $A(1;2)$ de vecteur directeur $\\vec{u}(3;-1)$ :</p>\n        <p>$$-1(x-1) - 3(y-2) = 0 \\Rightarrow -x+1-3y+6=0 \\Rightarrow -x-3y+7=0$$</p>\n\n        <h3>5. Droites parallèles et perpendiculaires</h3>\n        <p>Pour deux droites d'équations $ax+by+c=0$ et $a'x+b'y+c'=0$ :</p>\n        <ul>\n          <li>Elles sont <strong>parallèles</strong> si et seulement si $ab'-a'b=0$ (les vecteurs directeurs sont colinéaires).</li>\n          <li>Elles sont <strong>perpendiculaires</strong> si et seulement si $aa'+bb'=0$.</li>\n        </ul>\n        <p><strong>Exemple :</strong> $2x+3y-1=0$ et $3x-2y+7=0$ : on calcule $a a' + b b' = 2\\times3 + 3\\times(-2) = 6-6=0$. Les deux droites sont donc perpendiculaires.</p>\n      ",
         "exercises": [
@@ -1818,7 +1818,7 @@ const COURSE_DATA = [
       },
       {
         "id": "trigonometrie",
-        "title": "Chapitre 3 : Trigonométrie dans le triangle rectangle",
+        "title": "Chapitre 4 : Trigonométrie dans le triangle rectangle",
         "icon": "📐",
         "courseHtml": "\n        <h3>Introduction</h3>\n        <p>La trigonométrie permet de calculer des longueurs ou des angles dans un triangle rectangle <strong>sans avoir besoin de tout mesurer</strong>. C'est un outil essentiel qui reviendra constamment en Première.</p>\n\n        <h3>1. Vocabulaire du triangle rectangle</h3>\n        <p>Dans un triangle rectangle, on choisit un angle aigu (non droit) comme angle de référence, noté $\\widehat{x}$. Les trois côtés ont alors un nom précis par rapport à cet angle :</p>\n        <ul>\n          <li>L'<strong>hypoténuse</strong> : le côté le plus long, toujours opposé à l'angle droit.</li>\n          <li>Le côté <strong>opposé</strong> : le côté qui ne touche pas l'angle $\\widehat{x}$.</li>\n          <li>Le côté <strong>adjacent</strong> : le côté qui touche l'angle $\\widehat{x}$ (sans être l'hypoténuse).</li>\n        </ul>\n        <div class=\"card-warning\">\n          <strong>Attention :</strong> les côtés \"opposé\" et \"adjacent\" changent de nom selon l'angle choisi ! Identifie toujours d'abord l'angle de référence avant de nommer les côtés.\n        </div>\n\n        <h3>2. Les formules CAH-SOH-TOA</h3>\n        <p>Le moyen mnémotechnique <strong>CAH-SOH-TOA</strong> permet de retenir les trois formules fondamentales :</p>\n        <div class=\"formula\">\n          <p>$$\\cos(\\widehat{x}) = \\frac{\\text{Adjacent}}{\\text{Hypoténuse}} \\qquad \\sin(\\widehat{x}) = \\frac{\\text{Opposé}}{\\text{Hypoténuse}} \\qquad \\tan(\\widehat{x}) = \\frac{\\text{Opposé}}{\\text{Adjacent}}$$</p>\n        </div>\n        <p><strong>Exemple concret :</strong> Dans un triangle rectangle d'hypoténuse $10$ cm, avec un angle de $30°$, le côté opposé à cet angle mesure :</p>\n        <p>$$\\text{Opposé} = \\sin(30°) \\times \\text{Hypoténuse} = 0,5 \\times 10 = 5 \\text{ cm}$$</p>\n\n        <div class=\"card-tip\">\n          <strong>Astuce :</strong> pour choisir la bonne formule, demande-toi quels sont les <strong>deux côtés</strong> qui t'intéressent (ceux que tu connais et celui que tu cherches), puis choisis la formule (cos, sin ou tan) qui relie justement ces deux côtés-là.\n        </div>\n\n        <h3>3. Valeurs remarquables à connaître par cœur</h3>\n        <table style=\"width:100%; text-align:center; border-collapse: collapse; margin: 1em 0;\">\n          <tr style=\"border-bottom: 2px solid #ccc;\"><th>Angle</th><th>$30°$</th><th>$45°$</th><th>$60°$</th></tr>\n          <tr><td><strong>$\\sin$</strong></td><td>$\\frac{1}{2}$</td><td>$\\frac{\\sqrt{2}}{2}$</td><td>$\\frac{\\sqrt{3}}{2}$</td></tr>\n          <tr><td><strong>$\\cos$</strong></td><td>$\\frac{\\sqrt{3}}{2}$</td><td>$\\frac{\\sqrt{2}}{2}$</td><td>$\\frac{1}{2}$</td></tr>\n          <tr><td><strong>$\\tan$</strong></td><td>$\\frac{\\sqrt{3}}{3}$</td><td>$1$</td><td>$\\sqrt{3}$</td></tr>\n        </table>\n\n        <h3>4. La formule fondamentale</h3>\n        <p>Pour tout angle $\\widehat{x}$, la relation suivante est toujours vraie (elle découle du théorème de Pythagore appliqué au triangle rectangle) :</p>\n        <div class=\"formula\">\n          <p>$$\\cos^2(\\widehat{x}) + \\sin^2(\\widehat{x}) = 1$$</p>\n        </div>\n        <p>Cette formule permet de retrouver $\\sin$ si on connaît $\\cos$ (ou inversement), sans connaître les longueurs du triangle.</p>\n      ",
         "exercises": [
@@ -1958,141 +1958,6 @@ const COURSE_DATA = [
     "title": "Module 4 : Probabilités et Statistiques",
     "description": "Les arbres de probabilité et les statistiques descriptives.",
     "chapters": [
-      {
-        "id": "pourcentages_ecart_type",
-        "title": "Chapitre 4 : Pourcentages, évolutions et écart-type",
-        "icon": "📊",
-        "courseHtml": "\n        <h3>Partie A — Pourcentages et évolutions</h3>\n\n        <h4>1. Calculer un pourcentage</h4>\n        <p>Calculer $t\\%$ d'une quantité $N$, c'est calculer $\\frac{t}{100} \\times N$.</p>\n        <p><strong>Exemple :</strong> $15\\%$ de $80$ vaut $\\frac{15}{100} \\times 80 = 0,15 \\times 80 = 12$.</p>\n\n        <h4>2. Le coefficient multiplicateur</h4>\n        <p>Augmenter une quantité de $t\\%$, c'est la multiplier par le <strong>coefficient multiplicateur</strong> $\\left(1+\\frac{t}{100}\\right)$. Diminuer une quantité de $t\\%$, c'est la multiplier par $\\left(1-\\frac{t}{100}\\right)$.</p>\n        <div class=\"formula\">\n          <p>$$\\text{Augmentation de } t\\% : \\times \\left(1+\\frac{t}{100}\\right) \\qquad \\text{Diminution de } t\\% : \\times \\left(1-\\frac{t}{100}\\right)$$</p>\n        </div>\n        <p><strong>Exemple :</strong> Un article à $50$ € augmente de $20\\%$. Son nouveau prix est $50 \\times 1,20 = 60$ €.</p>\n\n        <div class=\"card-warning\">\n          <strong>Piège très classique :</strong> une hausse de $20\\%$ suivie d'une baisse de $20\\%$ <strong>ne ramène pas</strong> au prix initial ! Le coefficient global est $1,20 \\times 0,80 = 0,96$, soit une <strong>baisse</strong> de $4\\%$ par rapport au prix de départ.\n        </div>\n\n        <h4>3. Évolutions successives et taux global</h4>\n        <p>Pour calculer l'effet de plusieurs évolutions successives, on <strong>multiplie</strong> les coefficients multiplicateurs entre eux (on ne les additionne jamais).</p>\n        <p><strong>Exemple :</strong> Une quantité augmente de $5\\%$ deux années consécutives. Le coefficient global sur les deux ans est :</p>\n        <p>$$1,05 \\times 1,05 = 1,05^2 = 1,1025$$</p>\n        <p>Ce qui correspond à une augmentation globale de $10,25\\%$ (et non $10\\%$, car les intérêts se cumulent).</p>\n\n        <h3>Partie B — L'écart-type</h3>\n\n        <h4>1. À quoi sert l'écart-type ?</h4>\n        <p>La moyenne d'une série de valeurs ne dit pas tout : deux séries peuvent avoir la même moyenne mais être très différentes (l'une très \"regroupée\" autour de la moyenne, l'autre très \"dispersée\"). L'<strong>écart-type</strong> mesure cette dispersion : plus il est grand, plus les valeurs sont étalées autour de la moyenne.</p>\n\n        <h4>2. Calculer l'écart-type</h4>\n        <p>Pour une série de valeurs $x_1, x_2, \\dots, x_n$ de moyenne $\\bar{x}$, on procède en trois étapes :</p>\n        <p>1. Calculer la moyenne $\\bar{x}$.<br>\n        2. Calculer la <strong>variance</strong> $V$ : la moyenne des carrés des écarts à la moyenne.<br>\n        3. L'écart-type $\\sigma$ est la racine carrée de la variance.</p>\n        <div class=\"formula\">\n          <p>$$V = \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\dots + (x_n-\\bar{x})^2}{n} \\qquad \\qquad \\sigma = \\sqrt{V}$$</p>\n        </div>\n        <p><strong>Exemple :</strong> Série $2, 4, 4, 4, 5, 5, 7, 9$ (8 valeurs).</p>\n        <p>Moyenne : $\\bar{x} = \\frac{2+4+4+4+5+5+7+9}{8} = \\frac{40}{8} = 5$.</p>\n        <p>Écarts au carré : $(2-5)^2=9$ ; $(4-5)^2=1$ (trois fois) ; $(5-5)^2=0$ (deux fois) ; $(7-5)^2=4$ ; $(9-5)^2=16$.</p>\n        <p>Variance : $V = \\frac{9+1+1+1+0+0+4+16}{8} = \\frac{32}{8} = 4$.</p>\n        <p>Écart-type : $\\sigma = \\sqrt{4} = 2$.</p>\n\n        <div class=\"card-tip\">\n          <strong>Astuce :</strong> l'écart-type a la <strong>même unité</strong> que les valeurs de la série (contrairement à la variance, qui est dans une unité \"au carré\"). C'est pour cela qu'on le préfère pour décrire concrètement la dispersion.\n        </div>\n      ",
-        "exercises": [
-          {
-            "id": "pct_n1",
-            "level": 1,
-            "title": "Niveau 1 : Calculer un pourcentage direct",
-            "question": "<p>Calculer $15\\%$ de $80$.</p>",
-            "options": [
-              {
-                "text": "$12$",
-                "isCorrect": true
-              },
-              {
-                "text": "$15$",
-                "isCorrect": false
-              },
-              {
-                "text": "$1,2$",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction de l'exercice 1 (Niveau 1)</h4>\n            <p>$15\\%$ de $80$ se calcule par $\\frac{15}{100} \\times 80$.</p>\n            <p>$$\\frac{15}{100} \\times 80 = 0,15 \\times 80 = 12$$</p>\n          "
-          },
-          {
-            "id": "pct_n2",
-            "level": 1,
-            "title": "Niveau 1 : Appliquer une augmentation",
-            "question": "<p>Un article coûte $50$ €. Son prix augmente de $20\\%$. Quel est le nouveau prix ?</p>",
-            "options": [
-              {
-                "text": "$60$ €",
-                "isCorrect": true
-              },
-              {
-                "text": "$70$ €",
-                "isCorrect": false
-              },
-              {
-                "text": "$52$ €",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction de l'exercice 2 (Niveau 1)</h4>\n            <p>Augmenter de $20\\%$, c'est multiplier par le coefficient $1+\\frac{20}{100} = 1,20$.</p>\n            <p>$$50 \\times 1,20 = 60 \\text{ €}$$</p>\n          "
-          },
-          {
-            "id": "pct_n3",
-            "level": 2,
-            "title": "Niveau 2 : Évolutions successives (hausse puis baisse)",
-            "question": "<p>Un prix augmente de $10\\%$, puis ce nouveau prix diminue de $10\\%$. Le prix final est-il égal au prix initial ?</p>",
-            "options": [
-              {
-                "text": "Non, le prix final est inférieur au prix initial (coefficient global $0,99$)",
-                "isCorrect": true
-              },
-              {
-                "text": "Oui, les deux évolutions s'annulent exactement",
-                "isCorrect": false
-              },
-              {
-                "text": "Non, le prix final est supérieur au prix initial",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction de l'exercice 3 (Niveau 2)</h4>\n            <p>On multiplie les coefficients multiplicateurs des deux évolutions successives :</p>\n            <p>$$1,10 \\times 0,90 = 0,99$$</p>\n            <p>Le coefficient global est $0,99 < 1$ : le prix final est donc <strong>inférieur</strong> de $1\\%$ au prix initial.</p>\n            <p>⚠️ C'est le piège classique des pourcentages : $+10\\%$ puis $-10\\%$ ne ramène jamais à la valeur de départ, sauf si les deux taux portent sur des valeurs identiques (ce qui n'est pas le cas ici, car la baisse de $10\\%$ s'applique au prix déjà augmenté).</p>\n          "
-          },
-          {
-            "id": "pct_n4",
-            "level": 2,
-            "title": "Niveau 2 : Calculer la moyenne et la variance d'une série",
-            "question": "<p>On donne la série de notes $5, 7, 8, 10$. Quelle est sa moyenne ?</p>",
-            "options": [
-              {
-                "text": "$7,5$",
-                "isCorrect": true
-              },
-              {
-                "text": "$7$",
-                "isCorrect": false
-              },
-              {
-                "text": "$30$",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction de l'exercice 4 (Niveau 2)</h4>\n            <p>La moyenne est la somme des valeurs divisée par leur nombre :</p>\n            <p>$$\\bar{x} = \\frac{5+7+8+10}{4} = \\frac{30}{4} = 7,5$$</p>\n          "
-          },
-          {
-            "id": "pct_n5",
-            "level": 3,
-            "title": "Niveau 3 : Calculer un taux d'évolution global sur plusieurs années",
-            "question": "<p>Une population augmente de $5\\%$ chaque année pendant deux années consécutives. Quel est le taux d'évolution global sur ces deux ans ?</p>",
-            "options": [
-              {
-                "text": "$10,25\\%$",
-                "isCorrect": true
-              },
-              {
-                "text": "$10\\%$",
-                "isCorrect": false
-              },
-              {
-                "text": "$25\\%$",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction de l'exercice 5 (Niveau 3)</h4>\n            <p>Le coefficient multiplicateur d'une année est $1,05$. Sur deux années consécutives, on multiplie ce coefficient par lui-même :</p>\n            <p>$$1,05 \\times 1,05 = 1,05^2 = 1,1025$$</p>\n            <p>Le coefficient global $1,1025$ correspond à une augmentation de $(1,1025-1) \\times 100 = 10,25\\%$.</p>\n            <p>⚠️ Le taux global n'est <strong>pas</strong> simplement $5\\%+5\\%=10\\%$ : les augmentations se cumulent de façon multiplicative, pas additive.</p>\n          "
-          },
-          {
-            "id": "pct_n6",
-            "level": 3,
-            "title": "Niveau 3 : Calculer un écart-type complet",
-            "question": "<p>On donne la série $2, 4, 4, 4, 5, 5, 7, 9$. Quel est son écart-type ?</p>",
-            "options": [
-              {
-                "text": "$\\sigma = 2$",
-                "isCorrect": true
-              },
-              {
-                "text": "$\\sigma = 4$",
-                "isCorrect": false
-              },
-              {
-                "text": "$\\sigma = 16$",
-                "isCorrect": false
-              }
-            ],
-            "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p><strong>Étape 1 — Moyenne :</strong> $\\bar{x} = \\frac{2+4+4+4+5+5+7+9}{8} = \\frac{40}{8} = 5$.</p>\n            <p><strong>Étape 2 — Variance :</strong> on calcule chaque écart à la moyenne, on l'élève au carré, puis on fait la moyenne de ces carrés :</p>\n            <p>$(2-5)^2=9$, $(4-5)^2=1$ (×3), $(5-5)^2=0$ (×2), $(7-5)^2=4$, $(9-5)^2=16$.</p>\n            <p>$$V = \\frac{9+1+1+1+0+0+4+16}{8} = \\frac{32}{8} = 4$$</p>\n            <p><strong>Étape 3 — Écart-type :</strong> $\\sigma = \\sqrt{V} = \\sqrt{4} = 2$.</p>\n          "
-          }
-        ],
-        "yearLevel": "4e→2de"
-      },
       {
         "id": "statistiques",
         "title": "Chapitre 1 : Statistiques descriptives",
@@ -2278,6 +2143,141 @@ const COURSE_DATA = [
           }
         ],
         "yearLevel": "3e→2de"
+      },
+      {
+        "id": "pourcentages_ecart_type",
+        "title": "Chapitre 3 : Pourcentages, évolutions et écart-type",
+        "icon": "📊",
+        "courseHtml": "\n        <h3>Partie A — Pourcentages et évolutions</h3>\n\n        <h4>1. Calculer un pourcentage</h4>\n        <p>Calculer $t\\%$ d'une quantité $N$, c'est calculer $\\frac{t}{100} \\times N$.</p>\n        <p><strong>Exemple :</strong> $15\\%$ de $80$ vaut $\\frac{15}{100} \\times 80 = 0,15 \\times 80 = 12$.</p>\n\n        <h4>2. Le coefficient multiplicateur</h4>\n        <p>Augmenter une quantité de $t\\%$, c'est la multiplier par le <strong>coefficient multiplicateur</strong> $\\left(1+\\frac{t}{100}\\right)$. Diminuer une quantité de $t\\%$, c'est la multiplier par $\\left(1-\\frac{t}{100}\\right)$.</p>\n        <div class=\"formula\">\n          <p>$$\\text{Augmentation de } t\\% : \\times \\left(1+\\frac{t}{100}\\right) \\qquad \\text{Diminution de } t\\% : \\times \\left(1-\\frac{t}{100}\\right)$$</p>\n        </div>\n        <p><strong>Exemple :</strong> Un article à $50$ € augmente de $20\\%$. Son nouveau prix est $50 \\times 1,20 = 60$ €.</p>\n\n        <div class=\"card-warning\">\n          <strong>Piège très classique :</strong> une hausse de $20\\%$ suivie d'une baisse de $20\\%$ <strong>ne ramène pas</strong> au prix initial ! Le coefficient global est $1,20 \\times 0,80 = 0,96$, soit une <strong>baisse</strong> de $4\\%$ par rapport au prix de départ.\n        </div>\n\n        <h4>3. Évolutions successives et taux global</h4>\n        <p>Pour calculer l'effet de plusieurs évolutions successives, on <strong>multiplie</strong> les coefficients multiplicateurs entre eux (on ne les additionne jamais).</p>\n        <p><strong>Exemple :</strong> Une quantité augmente de $5\\%$ deux années consécutives. Le coefficient global sur les deux ans est :</p>\n        <p>$$1,05 \\times 1,05 = 1,05^2 = 1,1025$$</p>\n        <p>Ce qui correspond à une augmentation globale de $10,25\\%$ (et non $10\\%$, car les intérêts se cumulent).</p>\n\n        <h3>Partie B — L'écart-type</h3>\n\n        <h4>1. À quoi sert l'écart-type ?</h4>\n        <p>La moyenne d'une série de valeurs ne dit pas tout : deux séries peuvent avoir la même moyenne mais être très différentes (l'une très \"regroupée\" autour de la moyenne, l'autre très \"dispersée\"). L'<strong>écart-type</strong> mesure cette dispersion : plus il est grand, plus les valeurs sont étalées autour de la moyenne.</p>\n\n        <h4>2. Calculer l'écart-type</h4>\n        <p>Pour une série de valeurs $x_1, x_2, \\dots, x_n$ de moyenne $\\bar{x}$, on procède en trois étapes :</p>\n        <p>1. Calculer la moyenne $\\bar{x}$.<br>\n        2. Calculer la <strong>variance</strong> $V$ : la moyenne des carrés des écarts à la moyenne.<br>\n        3. L'écart-type $\\sigma$ est la racine carrée de la variance.</p>\n        <div class=\"formula\">\n          <p>$$V = \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\dots + (x_n-\\bar{x})^2}{n} \\qquad \\qquad \\sigma = \\sqrt{V}$$</p>\n        </div>\n        <p><strong>Exemple :</strong> Série $2, 4, 4, 4, 5, 5, 7, 9$ (8 valeurs).</p>\n        <p>Moyenne : $\\bar{x} = \\frac{2+4+4+4+5+5+7+9}{8} = \\frac{40}{8} = 5$.</p>\n        <p>Écarts au carré : $(2-5)^2=9$ ; $(4-5)^2=1$ (trois fois) ; $(5-5)^2=0$ (deux fois) ; $(7-5)^2=4$ ; $(9-5)^2=16$.</p>\n        <p>Variance : $V = \\frac{9+1+1+1+0+0+4+16}{8} = \\frac{32}{8} = 4$.</p>\n        <p>Écart-type : $\\sigma = \\sqrt{4} = 2$.</p>\n\n        <div class=\"card-tip\">\n          <strong>Astuce :</strong> l'écart-type a la <strong>même unité</strong> que les valeurs de la série (contrairement à la variance, qui est dans une unité \"au carré\"). C'est pour cela qu'on le préfère pour décrire concrètement la dispersion.\n        </div>\n      ",
+        "exercises": [
+          {
+            "id": "pct_n1",
+            "level": 1,
+            "title": "Niveau 1 : Calculer un pourcentage direct",
+            "question": "<p>Calculer $15\\%$ de $80$.</p>",
+            "options": [
+              {
+                "text": "$12$",
+                "isCorrect": true
+              },
+              {
+                "text": "$15$",
+                "isCorrect": false
+              },
+              {
+                "text": "$1,2$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction de l'exercice 1 (Niveau 1)</h4>\n            <p>$15\\%$ de $80$ se calcule par $\\frac{15}{100} \\times 80$.</p>\n            <p>$$\\frac{15}{100} \\times 80 = 0,15 \\times 80 = 12$$</p>\n          "
+          },
+          {
+            "id": "pct_n2",
+            "level": 1,
+            "title": "Niveau 1 : Appliquer une augmentation",
+            "question": "<p>Un article coûte $50$ €. Son prix augmente de $20\\%$. Quel est le nouveau prix ?</p>",
+            "options": [
+              {
+                "text": "$60$ €",
+                "isCorrect": true
+              },
+              {
+                "text": "$70$ €",
+                "isCorrect": false
+              },
+              {
+                "text": "$52$ €",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction de l'exercice 2 (Niveau 1)</h4>\n            <p>Augmenter de $20\\%$, c'est multiplier par le coefficient $1+\\frac{20}{100} = 1,20$.</p>\n            <p>$$50 \\times 1,20 = 60 \\text{ €}$$</p>\n          "
+          },
+          {
+            "id": "pct_n3",
+            "level": 2,
+            "title": "Niveau 2 : Évolutions successives (hausse puis baisse)",
+            "question": "<p>Un prix augmente de $10\\%$, puis ce nouveau prix diminue de $10\\%$. Le prix final est-il égal au prix initial ?</p>",
+            "options": [
+              {
+                "text": "Non, le prix final est inférieur au prix initial (coefficient global $0,99$)",
+                "isCorrect": true
+              },
+              {
+                "text": "Oui, les deux évolutions s'annulent exactement",
+                "isCorrect": false
+              },
+              {
+                "text": "Non, le prix final est supérieur au prix initial",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction de l'exercice 3 (Niveau 2)</h4>\n            <p>On multiplie les coefficients multiplicateurs des deux évolutions successives :</p>\n            <p>$$1,10 \\times 0,90 = 0,99$$</p>\n            <p>Le coefficient global est $0,99 < 1$ : le prix final est donc <strong>inférieur</strong> de $1\\%$ au prix initial.</p>\n            <p>⚠️ C'est le piège classique des pourcentages : $+10\\%$ puis $-10\\%$ ne ramène jamais à la valeur de départ, sauf si les deux taux portent sur des valeurs identiques (ce qui n'est pas le cas ici, car la baisse de $10\\%$ s'applique au prix déjà augmenté).</p>\n          "
+          },
+          {
+            "id": "pct_n4",
+            "level": 2,
+            "title": "Niveau 2 : Calculer la moyenne et la variance d'une série",
+            "question": "<p>On donne la série de notes $5, 7, 8, 10$. Quelle est sa moyenne ?</p>",
+            "options": [
+              {
+                "text": "$7,5$",
+                "isCorrect": true
+              },
+              {
+                "text": "$7$",
+                "isCorrect": false
+              },
+              {
+                "text": "$30$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction de l'exercice 4 (Niveau 2)</h4>\n            <p>La moyenne est la somme des valeurs divisée par leur nombre :</p>\n            <p>$$\\bar{x} = \\frac{5+7+8+10}{4} = \\frac{30}{4} = 7,5$$</p>\n          "
+          },
+          {
+            "id": "pct_n5",
+            "level": 3,
+            "title": "Niveau 3 : Calculer un taux d'évolution global sur plusieurs années",
+            "question": "<p>Une population augmente de $5\\%$ chaque année pendant deux années consécutives. Quel est le taux d'évolution global sur ces deux ans ?</p>",
+            "options": [
+              {
+                "text": "$10,25\\%$",
+                "isCorrect": true
+              },
+              {
+                "text": "$10\\%$",
+                "isCorrect": false
+              },
+              {
+                "text": "$25\\%$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction de l'exercice 5 (Niveau 3)</h4>\n            <p>Le coefficient multiplicateur d'une année est $1,05$. Sur deux années consécutives, on multiplie ce coefficient par lui-même :</p>\n            <p>$$1,05 \\times 1,05 = 1,05^2 = 1,1025$$</p>\n            <p>Le coefficient global $1,1025$ correspond à une augmentation de $(1,1025-1) \\times 100 = 10,25\\%$.</p>\n            <p>⚠️ Le taux global n'est <strong>pas</strong> simplement $5\\%+5\\%=10\\%$ : les augmentations se cumulent de façon multiplicative, pas additive.</p>\n          "
+          },
+          {
+            "id": "pct_n6",
+            "level": 3,
+            "title": "Niveau 3 : Calculer un écart-type complet",
+            "question": "<p>On donne la série $2, 4, 4, 4, 5, 5, 7, 9$. Quel est son écart-type ?</p>",
+            "options": [
+              {
+                "text": "$\\sigma = 2$",
+                "isCorrect": true
+              },
+              {
+                "text": "$\\sigma = 4$",
+                "isCorrect": false
+              },
+              {
+                "text": "$\\sigma = 16$",
+                "isCorrect": false
+              }
+            ],
+            "correction": "\n            <h4>Correction de l'exercice 6 (Niveau 3)</h4>\n            <p><strong>Étape 1 — Moyenne :</strong> $\\bar{x} = \\frac{2+4+4+4+5+5+7+9}{8} = \\frac{40}{8} = 5$.</p>\n            <p><strong>Étape 2 — Variance :</strong> on calcule chaque écart à la moyenne, on l'élève au carré, puis on fait la moyenne de ces carrés :</p>\n            <p>$(2-5)^2=9$, $(4-5)^2=1$ (×3), $(5-5)^2=0$ (×2), $(7-5)^2=4$, $(9-5)^2=16$.</p>\n            <p>$$V = \\frac{9+1+1+1+0+0+4+16}{8} = \\frac{32}{8} = 4$$</p>\n            <p><strong>Étape 3 — Écart-type :</strong> $\\sigma = \\sqrt{V} = \\sqrt{4} = 2$.</p>\n          "
+          }
+        ],
+        "yearLevel": "4e→2de"
       }
     ]
   },
